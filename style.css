@@ -1,11 +1,202 @@
-body {
-  font-family: Arial;
-  text-align: center;
-  background-color: #e8f5e9;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-button {
-  padding: 10px;
-  margin: 10px;
-  cursor: pointer;
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4fff4;
+    color: #222;
+    transition: 0.5s;
+}
+
+header{
+    background: linear-gradient(to right, #2e7d32, #66bb6a);
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+header h1{
+    font-size: 3rem;
+}
+
+header p{
+    margin-top: 10px;
+}
+
+#modoEscuro{
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+nav{
+    background-color: #1b5e20;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover{
+    color: yellow;
+}
+
+.banner{
+    background-image: url("https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1400&auto=format&fit=crop");
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-texto{
+    background-color: rgba(0,0,0,0.6);
+    padding: 30px;
+    border-radius: 15px;
+    color: white;
+    text-align: center;
+}
+
+.titulo{
+    text-align: center;
+    margin: 40px 0 20px;
+    font-size: 2rem;
+}
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card{
+    width: 320px;
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.card:hover{
+    transform: scale(1.03);
+}
+
+.card img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h3{
+    padding: 15px;
+    color: #2e7d32;
+}
+
+.card p{
+    padding: 0 15px 20px;
+}
+
+.lista{
+    width: 80%;
+    margin: auto;
+    font-size: 1.2rem;
+    line-height: 2;
+}
+
+.quiz-container{
+    background-color: white;
+    width: 80%;
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+.quiz-container button{
+    display: block;
+    margin: 10px 0;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+#proxima{
+    background-color: #2e7d32;
+    color: white;
+    font-weight: bold;
+}
+
+footer{
+    background-color: #1b5e20;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.dark-mode{
+    background-color: #121212;
+    color: white;
+}
+
+.dark-mode .card,
+.dark-mode .quiz-container{
+    background-color: #1f1f1f;
+    color: white;
+}
+
+@media(max-width: 768px){
+
+    header h1{
+        font-size: 2rem;
+    }
+
+    nav{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .banner{
+        height: 300px;
+    }
+
+    .banner-texto{
+        width: 90%;
+    }
+
+    .cards{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card{
+        width: 90%;
+    }
+
+    .quiz-container{
+        width: 90%;
+    }
+
 }
