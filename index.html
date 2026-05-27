@@ -1,19 +1,161 @@
+# index.html
+
+```html
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Agro Sustentável</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AgroTech Sustentável</title>
+
+    <link rel="stylesheet" href="estilo.css">
 </head>
+
 <body>
 
-  <h1>🌱 Agro Sustentável</h1>
-  <p>Teste seus conhecimentos sobre meio ambiente!</p>
+    <header>
+        <h1>🌱 AgroTech Sustentável</h1>
 
-  <button onclick="iniciarQuiz()">Iniciar Quiz</button>
+        <p>
+            Tecnologia e inovação para um agro mais sustentável.
+        </p>
 
-  <div id="quiz"></div>
+        <button id="modoEscuro">🌙 Modo Escuro</button>
+    </header>
 
-  <script src="script.js"></script>
+    <nav>
+        <a href="#tecnologias">Tecnologias</a>
+        <a href="#beneficios">Benefícios</a>
+        <a href="#quiz">Quiz</a>
+    </nav>
+
+    <section class="banner">
+        <div class="banner-texto">
+            <h2>O futuro do agro já começou</h2>
+
+            <p>
+                Conheça tecnologias que ajudam a preservar o meio ambiente e aumentar a produtividade no campo.
+            </p>
+        </div>
+    </section>
+
+    <main>
+
+        <section id="tecnologias">
+
+            <h2 class="titulo">🌿 Tecnologias Sustentáveis</h2>
+
+            <div class="cards">
+
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1200&auto=format&fit=crop" alt="Agricultura de Precisão">
+
+                    <h3>Agricultura de Precisão</h3>
+
+                    <p>
+                        Utiliza sensores e GPS para aplicar fertilizantes e água somente onde necessário, evitando desperdícios.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?q=80&w=1200&auto=format&fit=crop" alt="Drones Agrícolas">
+
+                    <h3>Drones Agrícolas</h3>
+
+                    <p>
+                        Os drones monitoram plantações, detectam pragas e ajudam no uso consciente de defensivos agrícolas.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop" alt="Energia Solar">
+
+                    <h3>Energia Solar</h3>
+
+                    <p>
+                        A energia solar reduz custos e diminui impactos ambientais nas propriedades rurais.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?q=80&w=1200&auto=format&fit=crop" alt="Irrigação Inteligente">
+
+                    <h3>Irrigação Inteligente</h3>
+
+                    <p>
+                        Sistemas automáticos utilizam sensores para economizar água e irrigar no momento correto.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop" alt="IoT no Agro">
+
+                    <h3>IoT no Agro</h3>
+
+                    <p>
+                        Sensores conectados monitoram temperatura, umidade e qualidade do solo em tempo real.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=1200&auto=format&fit=crop" alt="IA no Agro">
+
+                    <h3>Inteligência Artificial</h3>
+
+                    <p>
+                        A IA ajuda produtores a prever colheitas, identificar doenças e melhorar a produção agrícola.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="beneficios">
+
+            <h2 class="titulo">✅ Benefícios da Tecnologia no Agro</h2>
+
+            <ul class="lista">
+                <li>🌎 Redução do impacto ambiental</li>
+                <li>💧 Economia de água</li>
+                <li>⚡ Uso de energia limpa</li>
+                <li>🚜 Maior produtividade</li>
+                <li>🌱 Produção mais sustentável</li>
+                <li>📡 Monitoramento inteligente das plantações</li>
+            </ul>
+
+        </section>
+
+        <section id="quiz">
+
+            <h2 class="titulo">🎮 Quiz Sustentável</h2>
+
+            <div class="quiz-container">
+
+                <h3 id="pergunta"></h3>
+
+                <div id="respostas"></div>
+
+                <button id="proxima">Próxima Pergunta</button>
+
+                <p id="pontuacao"></p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <p>
+            Projeto desenvolvido para o Concurso Agrinho 2026 🌱
+        </p>
+
+    </footer>
+
+    <script src="script.js"></script>
+
 </body>
 </html>
