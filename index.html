@@ -44,28 +44,63 @@
         
         <div class="lg:col-span-2 space-y-12">
             
+            <section class="bg-emerald-900 text-white p-6 rounded-2xl shadow-xl space-y-8">
+                <div class="text-center border-b border-emerald-700 pb-4">
+                    <h2 class="text-3xl font-black"><i class="fa-solid fa-gamepad mr-2 text-amber-400"></i> Espaço Gamificado Agrinho</h2>
+                    <p class="text-sm text-emerald-200 mt-1">Aprenda jogando sobre o equilíbrio no campo!</p>
+                </div>
+
+                <div class="bg-white text-gray-800 p-5 rounded-xl shadow">
+                    <h3 class="text-lg font-bold text-emerald-900 mb-3"><i class="fa-solid fa-circle-question mr-1 text-emerald-600"></i> 1. Quiz do Agro Sustentável</h3>
+                    <div id="quiz-box">
+                        <p id="quiz-pergunta" class="font-semibold text-base mb-4 text-gray-700"></p>
+                        <div id="quiz-opcoes" class="space-y-2"></div>
+                        <p id="quiz-feedback" class="mt-4 text-sm font-bold hidden p-3 rounded-lg"></p>
+                        <button id="btn-proxima" onclick="proximaPergunta()" class="mt-4 bg-emerald-600 text-white font-bold py-2 px-4 rounded-lg hidden hover:bg-emerald-700 transition-colors w-full">Próxima Pergunta</button>
+                    </div>
+                </div>
+
+                <div class="bg-white text-gray-800 p-5 rounded-xl shadow">
+                    <h3 class="text-lg font-bold text-emerald-900 mb-3"><i class="fa-solid fa-sliders mr-1 text-emerald-600"></i> 2. Missão Equilíbrio Verde</h3>
+                    <p class="text-xs text-gray-500 mb-4">Tome decisões estratégicas na fazenda para manter os dois medidores equilibrados!</p>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-4 text-center">
+                        <div class="bg-amber-50 p-2 rounded border border-amber-200">
+                            <span class="text-xs font-bold text-amber-800 block">💰 Lucro / Produção</span>
+                            <span id="status-producao" class="text-xl font-black text-amber-600">50%</span>
+                        </div>
+                        <div class="bg-emerald-50 p-2 rounded border border-emerald-200">
+                            <span class="text-xs font-bold text-emerald-800 block">🌳 Saúde da Natureza</span>
+                            <span id="status-ambiente" class="text-xl font-black text-emerald-600">50%</span>
+                        </div>
+                    </div>
+
+                    <div id="simulador-box" class="bg-gray-50 p-4 rounded-lg border border-gray-200 text-center">
+                        <p id="sim-cenario" class="font-medium text-sm text-gray-700 mb-4"></p>
+                        <div id="sim-botoes" class="grid grid-cols-1 sm:grid-cols-2 gap-2"></div>
+                    </div>
+                </div>
+            </section>
+            
             <section>
                 <h2 class="text-2xl font-bold text-gray-900 border-b-4 border-emerald-600 pb-2 mb-6">
                     <i class="fa-solid fa-newspaper text-emerald-600 mr-2"></i> Artigos Pedagógicos
                 </h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    
                     <article class="bg-white rounded-lg overflow-hidden shadow p-5 border border-gray-100 flex flex-col justify-between">
                         <div>
                             <span class="text-emerald-600 text-xs font-semibold uppercase block mb-1">Tecnologia</span>
                             <h3 class="font-bold text-lg text-gray-900 mb-2">⚡ Agricultura de Precisão</h3>
-                            <p class="text-gray-600 text-sm leading-relaxed">Consiste no gerenciamento detalhado do campo através de sensores de solo, drones de mapeamento e GPS em tratores. Permite aplicar fertilizantes e água apenas onde é estritamente necessário, reduzindo custos e desperdícios ecológicos.</p>
+                            <p class="text-gray-600 text-sm leading-relaxed">Consiste no gerenciamento detalhado do campo através de sensores de solo, drones de mapeamento e GPS em tratores. Permite aplicar fertilizantes e água apenas onde é necessário, reduzindo custos.</p>
                         </div>
                     </article>
-
                     <article class="bg-white rounded-lg overflow-hidden shadow p-5 border border-gray-100 flex flex-col justify-between">
                         <div>
                             <span class="text-emerald-600 text-xs font-semibold uppercase block mb-1">Sustentabilidade</span>
                             <h3 class="font-bold text-lg text-gray-900 mb-2">🌱 Sistema de Plantio Direto</h3>
-                            <p class="text-gray-600 text-sm leading-relaxed">Técnica revolucionária de cultivo onde o solo não é revolvido por arados. As sementes são colocadas sobre a palhada da cultura anterior. Isso protege o solo contra a erosão das chuvas, preserva a umidade natural e fixa carbono.</p>
+                            <p class="text-gray-600 text-sm leading-relaxed">Técnica de cultivo onde o solo não é revolvido. As sementes são colocadas sobre a palhada anterior. Isso protege o solo de erosões, preserva a umidade e fixa o carbono na terra.</p>
                         </div>
                     </article>
-
                 </div>
             </section>
 
@@ -73,24 +108,10 @@
                 <h2 class="text-2xl font-bold text-gray-900 border-b-4 border-emerald-600 pb-2 mb-6">
                     <i class="fa-solid fa-lightbulb text-emerald-600 mr-2"></i> Novidades do Campo Sustentável
                 </h2>
-                
                 <div class="space-y-4">
                     <div class="bg-white p-6 rounded-xl shadow border border-gray-100 card-transicao">
-                        <div class="flex justify-between items-center mb-2">
-                            <span class="bg-amber-100 text-amber-800 text-xs px-2.5 py-0.5 rounded font-bold">Inovação</span>
-                            <span class="text-xs text-gray-400">Destaque da Semana</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">🚜 Tratores Movidos a Biometano</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed">Grandes maquinários modernos estão deixando de usar o óleo diesel para rodar com biometano. Esse biocombustível é gerado diretamente nas fazendas através de biodigestores que tratam resíduos animais e restos orgânicos, gerando energia limpa e autossuficiente.</p>
-                    </div>
-
-                    <div class="bg-white p-6 rounded-xl shadow border border-gray-100 card-transicao">
-                        <div class="flex justify-between items-center mb-2">
-                            <span class="bg-emerald-100 text-emerald-800 text-xs px-2.5 py-0.5 rounded font-bold">Manejo Integrado</span>
-                            <span class="text-xs text-gray-400">Tendência</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">🌳 Integração Lavoura-Pecuária-Floresta (ILPF)</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed">Uma estratégia de produção que consorcia atividades agrícolas, pecuárias e florestais em uma mesma área. O gado aproveita a sombra das árvores, as plantas protegem o solo, e o produtor diversifica a renda colhendo grãos, carne e madeira de forma regenerativa.</p>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">⚗️ Tratores Movidos a Biometano</h3>
+                        <p class="text-gray-600 text-sm">Maquinários modernos que reduzem drasticamente a pegada de carbono utilizando biocombustível gerado a partir dos resíduos orgânicos e dejetos animais da própria fazenda.</p>
                     </div>
                 </div>
             </section>
@@ -100,31 +121,24 @@
                     <i class="fa-solid fa-images text-emerald-600 mr-2"></i> Galeria Prática ODS
                 </h2>
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                    
                     <div class="relative rounded-xl overflow-hidden shadow border border-gray-100 group">
-                        <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad499?auto=format&fit=crop&w=400&q=80" alt="Irrigação Inteligente" class="w-full h-44 object-cover group-hover:scale-110 transition-transform duration-300">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-3 flex flex-col justify-end">
+                        <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad499?auto=format&fit=crop&w=400&q=80" alt="Irrigação" class="w-full h-44 object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 p-3 flex flex-col justify-end">
                             <span class="text-white font-bold text-sm">Irrigação Precisa</span>
-                            <p class="text-[10px] text-gray-300">Economia real de água potável.</p>
                         </div>
                     </div>
-
                     <div class="relative rounded-xl overflow-hidden shadow border border-gray-100 group">
-                        <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=400&q=80" alt="Painéis Solares no Campo" class="w-full h-44 object-cover group-hover:scale-110 transition-transform duration-300">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-3 flex flex-col justify-end">
+                        <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=400&q=80" alt="Solar" class="w-full h-44 object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 p-3 flex flex-col justify-end">
                             <span class="text-white font-bold text-sm">Energia Solar</span>
-                            <p class="text-[10px] text-gray-300">Fazendas movidas a luz limpa.</p>
                         </div>
                     </div>
-
                     <div class="relative rounded-xl overflow-hidden shadow border border-gray-100 group">
-                        <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=400&q=80" alt="Solo Protegido" class="w-full h-44 object-cover group-hover:scale-110 transition-transform duration-300">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-3 flex flex-col justify-end">
+                        <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=400&q=80" alt="Solo" class="w-full h-44 object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 p-3 flex flex-col justify-end">
                             <span class="text-white font-bold text-sm">Solo Conservado</span>
-                            <p class="text-[10px] text-gray-300">Manejo orgânico da terra.</p>
                         </div>
                     </div>
-
                 </div>
             </section>
         </div>
@@ -135,29 +149,11 @@
                     <i class="fa-solid fa-video text-emerald-600 mr-2"></i> Conteúdo Audiovisual
                 </h2>
                 <div class="space-y-6">
-                    
-                    <div class="bg-white rounded-lg overflow-hidden shadow border border-gray-100 card-transicao p-4">
+                    <div class="bg-white rounded-lg overflow-hidden shadow border border-gray-100 p-4">
                         <h3 class="font-bold text-gray-800 mb-3 text-sm">Estudo de Caso: ILPF no Brasil</h3>
-                        
-                        <div class="relative w-full aspect-video rounded overflow-hidden shadow-inner bg-black">
-                            <iframe 
-                                class="w-full h-full" 
-                                src="https://www.youtube.com/embed/g87A_gY8wF0" 
-                                title="Futuro Sustentável" 
-                                frameborder="0" 
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                                allowfullscreen>
-                            </iframe>
+                        <div class="relative w-full aspect-video rounded overflow-hidden bg-black">
+                            <iframe class="w-full h-full" src="https://www.youtube.com/embed/g87A_gY8wF0" title="Futuro Sustentável" frameborder="0" allowfullscreen></iframe>
                         </div>
-                        
-                        <div class="mt-3">
-                            <p class="text-xs text-gray-500">Documentário prático mostrando o equilíbrio e o ganho ambiental ao integrar árvores, pastagens e lavouras comerciais.</p>
-                        </div>
-                    </div>
-
-                    <div class="bg-emerald-50 p-4 rounded-lg border-l-4 border-emerald-600">
-                        <p class="italic text-gray-700">"Tecnologia e preservação ambiental caminham juntas no novo cenário agrícola do Paraná."</p>
-                        <p class="text-sm font-bold mt-2 text-emerald-950">- Eng. Carlos Silva (Cascavel/PR)</p>
                     </div>
                 </div>
             </section>
@@ -169,37 +165,118 @@
     </footer>
 
     <script>
-        const cidades = [
-            { nome: 'Curitiba', id: 'Curitiba,BR', tPadrao: 16, uPadrao: 82, dPadrao: 'Céu limpo', iPadrao: '01n' },
-            { nome: 'Cascavel', id: 'Cascavel,BR', tPadrao: 20, uPadrao: 73, dPadrao: 'Poucas nuvens', iPadrao: '02n' },
-            { nome: 'Londrina', id: 'Londrina,BR', tPadrao: 22, uPadrao: 68, dPadrao: 'Céu limpo', iPadrao: '01n' },
-            { nome: 'Maringá', id: 'Maringá,BR', tPadrao: 21, uPadrao: 70, dPadrao: 'Céu limpo', iPadrao: '01n' }
+        // --- JOGO 1: QUIZ SCRIPT ---
+        const dadosQuiz = [
+            { p: "Qual o principal benefício da Agricultura de Precisão?", o: ["Gastar mais insumos", "Economizar recursos e aplicar de forma exata", "Substituir todas as plantas por robôs"], c: 1, e: "Correto! Ela evita desperdícios aplicando apenas a quantidade exata demandada." },
+            { p: "O que caracteriza o Sistema de Plantio Direto?", o: ["Revolver a terra com arados pesados", "Plantar sementes sobre a palhada da cultura anterior", "Queimar os restos vegetais da colheita"], c: 1, e: "Exato! A palhada protege o solo contra erosões e retém a umidade." },
+            { p: "Os tratores movidos a biometano utilizam combustível derivado de:", o: ["Petróleo importado", "Resíduos biológicos e dejetos da própria fazenda", "Energia eólica pura"], c: 1, e: "Muito bem! O reaproveitamento de dejetos orgânicos gera combustível limpo." }
         ];
+        let idQuizAtual = 0;
 
-        const API_KEY = 'SUA_API_KEY_AQUI'; 
-
-        function renderizarCard(container, nome, temp, umidade, desc, icone) {
-            container.innerHTML += `
-                <div class="bg-gray-50 p-4 rounded-xl border border-gray-100 flex flex-col items-center shadow-sm">
-                    <span class="font-bold text-gray-700 block text-base">${nome}</span>
-                    <img src="https://openweathermap.org/img/wn/${icone}@2x.png" alt="${desc}" class="w-14 h-14">
-                    <span class="text-2xl font-black text-gray-900">${temp}°C</span>
-                    <span class="text-xs text-gray-500 capitalize mt-0.5">${desc}</span>
-                    <span class="text-xs text-emerald-700 font-semibold mt-2 bg-emerald-100/50 px-2 py-0.5 rounded-full">
-                        <i class="fa-solid fa-droplet text-xs mr-1"></i> UR: ${umidade}%
-                    </span>
-                </div>`;
+        function carregarQuiz() {
+            const feed = document.getElementById("quiz-feedback");
+            feed.classList.add("hidden");
+            document.getElementById("btn-proxima").classList.add("hidden");
+            
+            let item = dadosQuiz[idQuizAtual];
+            document.getElementById("quiz-pergunta").innerText = item.p;
+            
+            let divOpcoes = document.getElementById("quiz-opcoes");
+            divOpcoes.innerHTML = "";
+            item.o.forEach((opcao, index) => {
+                divOpcoes.innerHTML += `<button onclick="checarResposta(${index})" class="w-full text-left bg-gray-100 hover:bg-emerald-100 p-3 rounded-lg border border-gray-200 transition-colors text-sm">${opcao}</button>`;
+            });
         }
 
-        async function buscarClima() {
+        function checarResposta(escolha) {
+            let item = dadosQuiz[idQuizAtual];
+            let feed = document.getElementById("quiz-feedback");
+            feed.classList.remove("hidden", "bg-red-100", "text-red-800", "bg-green-100", "text-green-800");
+            
+            if(escolha === item.c) {
+                feed.innerText = item.e;
+                feed.classList.add("bg-green-100", "text-green-800");
+            } else {
+                feed.innerText = "Ops, resposta incorreta! Tente analisar com foco no equilíbrio ambiental.";
+                feed.classList.add("bg-red-100", "text-red-800");
+            }
+            document.getElementById("btn-proxima").classList.remove("hidden");
+        }
+
+        function proximaPergunta() {
+            idQuizAtual = (idQuizAtual + 1) % dadosQuiz.length;
+            carregarQuiz();
+        }
+
+        // --- JOGO 2: SIMULADOR DE DECISÃO ---
+        let prod = 50, amb = 50;
+        const cenarios = [
+            { c: "Pragas surgiram na plantação. O que você faz?", o: [{t:"Pulverizar defensivos químicos em excesso", p:30, a:-30}, {t:"Usar drones e manejo biológico localizado", p:15, a:15}] },
+            { c: "Você precisa aumentar a área de pastagem do gado. Qual o caminho?", o: [{t:"Desmatar uma nova área de mata nativa", p:25, a:-40}, {t:"Adotar o sistema integrado ILPF (com árvores)", p:15, a:20}] },
+            { c: "Período de forte seca na região paranaense. Qual medida tomar?", o: [{t:"Ligar mangueiras e bombear água sem controle", p:10, a:-25}, {t:"Utilizar sensores de gotejamento de precisão", p:20, a:10}] }
+        ];
+        let idCenAtual = 0;
+
+        function carregarCenario() {
+            if(prod <= 0 || amb <= 0) {
+                document.getElementById("sim-cenario").innerHTML = "<strong>Fim de Jogo!</strong> Sua fazenda quebrou ou degradou o meio ambiente por completo. Reiniciando...";
+                document.getElementById("sim-botoes").innerHTML = `<button onclick="reiniciarSimulador()" class="w-full bg-emerald-800 text-white p-2 rounded">Tentar Novamente</button>`;
+                return;
+            }
+            let cenario = cenarios[idCenAtual];
+            document.getElementById("sim-cenario").innerText = cenario.c;
+            let divBotoes = document.getElementById("sim-botoes");
+            divBotoes.innerHTML = "";
+            cenario.o.forEach(opcao => {
+                divBotoes.innerHTML += `<button onclick="escolherDecisao(${opcao.p}, ${opcao.a})" class="bg-emerald-50 hover:bg-emerald-600 hover:text-white p-3 rounded-lg border border-emerald-200 text-xs font-semibold text-emerald-900 transition-all">${opcao.t}</button>`;
+            });
+        }
+
+        function escolherDecisao(altP, altA) {
+            prod = Math.min(100, Math.max(0, prod + altP));
+            amb = Math.min(100, Math.max(0, amb + altA));
+            document.getElementById("status-producao").innerText = prod + "%";
+            document.getElementById("status-ambiente").innerText = amb + "%";
+            
+            idCenAtual = (idCenAtual + 1) % cenarios.length;
+            carregarCenario();
+        }
+
+        function reiniciarSimulador() {
+            prod = 50; amb = 50; idCenAtual = 0;
+            document.getElementById("status-producao").innerText = "50%";
+            document.getElementById("status-ambiente").innerText = "50%";
+            carregarCenario();
+        }
+
+        // --- SISTEMA DE LOG ESTÁTICO DO CLIMA ---
+        function carregarClimaEstatico() {
             const container = document.getElementById('clima-container');
-            if (!container) return;
-
+            const cidades = [
+                { nome: 'Curitiba', t: 16, u: 82, d: 'Céu limpo', i: '01n' },
+                { nome: 'Cascavel', t: 20, u: 73, d: 'Poucas nuvens', i: '02n' },
+                { nome: 'Londrina', t: 22, u: 68, d: 'Céu limpo', i: '01n' },
+                { nome: 'Maringá', t: 21, u: 70, d: 'Céu limpo', i: '01n' }
+            ];
             container.innerHTML = ''; 
-            cidades.forEach(c => renderizarCard(container, c.nome, c.tPadrao, c.uPadrao, c.dPadrao, c.iPadrao));
+            cidades.forEach(c => {
+                container.innerHTML += `
+                    <div class="bg-gray-50 p-4 rounded-xl border border-gray-100 flex flex-col items-center shadow-sm">
+                        <span class="font-bold text-gray-700 block text-base">${c.nome}</span>
+                        <img src="https://openweathermap.org/img/wn/${c.i}@2x.png" alt="${c.d}" class="w-14 h-14">
+                        <span class="text-2xl font-black text-gray-900">${c.t}°C</span>
+                        <span class="text-xs text-gray-500 capitalize mt-0.5">${c.d}</span>
+                        <span class="text-xs text-emerald-700 font-semibold mt-2 bg-emerald-100/50 px-2 py-0.5 rounded-full">UR: ${c.u}%</span>
+                    </div>`;
+            });
         }
 
-        window.addEventListener('load', buscarClima);
+        // Inicialização Geral
+        window.addEventListener('load', () => {
+            carquis = carregarQuiz();
+            carregarCenario();
+            carregarClimaEstatico();
+        });
     </script>
 </body>
 </html>
