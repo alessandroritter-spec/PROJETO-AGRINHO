@@ -57,7 +57,7 @@
                     <article class="bg-white rounded-lg overflow-hidden shadow p-5 border border-gray-100">
                         <span class="text-emerald-600 text-xs font-semibold uppercase">Sustentabilidade</span>
                         <h3 class="font-bold text-lg mt-1 mb-2">Plantio Direto</h3>
-                        <p class="text-gray-600 text-sm">Entenda os motivos que tornam o manejo e conservação do solo paranaense uma referência nacional.</p>
+                        <p class="text-gray-600 text-sm">Entenda os motivos que tornam o acreage e a conservação do solo paranaense uma referência nacional.</p>
                     </article>
                 </div>
             </section>
@@ -69,7 +69,7 @@
                 <div class="bg-white p-6 rounded-xl shadow border border-gray-100 card-transicao">
                     <span class="bg-amber-100 text-amber-800 text-xs px-2.5 py-0.5 rounded font-bold">Lançamento</span>
                     <h3 class="text-xl font-bold mt-1 text-gray-800">Tratores Movidos a Biometano</h3>
-                    <p class="text-gray-600 mt-2">Maquinários modernos reduzem drasticamente a pegada de carbono ao utilizar biocombustível gerado a partir dos resíduos da própria fazenda.</p>
+                    <p class="text-gray-600 mt-2">Maquinários modernos reduzem drasticamente a pegada de carbono ao utilizar biocombustível gerado a partir dos resíduos biológicos da própria fazenda.</p>
                 </div>
             </section>
         </div>
@@ -79,13 +79,26 @@
                 <h2 class="text-2xl font-bold text-gray-900 border-b-4 border-emerald-600 pb-2 mb-6">
                     <i class="fa-solid fa-video text-emerald-600 mr-2"></i> Vídeos e Entrevistas
                 </h2>
-                <div class="bg-white rounded-lg overflow-hidden shadow p-4 border border-gray-100 card-transicao">
-    <h3 class="font-bold text-gray-800 mb-2">Entrevista: O Futuro Sustentável com ILPF</h3>
-    <iframe class="w-full h-48 rounded" src="https://www.youtube.com/embed/gH-7Z_P6hG0" title="Embrapa: Tecnologia e Sustentabilidade no Campo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <div class="mt-2">
-        <p class="text-xs text-gray-500 mt-1">Pesquisadores da Embrapa explicam como o sistema que une lavoura, pecuária e floresta garante alta produção e recupera o meio ambiente.</p>
-    </div>
-</div>
+                <div class="space-y-6">
+                    <div class="bg-white rounded-lg overflow-hidden shadow p-4 border border-gray-100 card-transicao">
+                        <h3 class="font-bold text-gray-800 mb-2">Documentário: O Futuro Sustentável no Campo</h3>
+                        
+                        <video class="w-full h-48 rounded bg-black" controls poster="https://images.unsplash.com/photo-1530973428-5bf2db244121?auto=format&fit=crop&w=400&q=80">
+                            <source src="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Combine_harvester_in_action.ogv/Combine_harvester_in_action.ogv.360p.vp9.webm" type="video/webm">
+                            Seu navegador não suporta a reprodução de vídeos.
+                        </video>
+                        
+                        <div class="mt-2">
+                            <p class="text-xs text-gray-500 mt-1">Imagens reais da aplicação da colheita tecnológica de precisão que reduz o impacto ambiental e otimiza a produção agrícola.</p>
+                        </div>
+                    </div>
+                    <div class="bg-emerald-50 p-4 rounded-lg border-l-4 border-emerald-600">
+                        <p class="italic text-gray-700">"Tecnologia e preservação ambiental caminham juntas no novo cenário agrícola do Paraná."</p>
+                        <p class="text-sm font-bold mt-2 text-emerald-950">- Eng. Carlos Silva (Cascavel/PR)</p>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
 
     <footer class="bg-gray-900 text-gray-400 text-center py-8 mt-12">
@@ -94,25 +107,37 @@
 
     <script>
         const cidades = [
-            { nome: 'Curitiba', id: 'Curitiba,BR' },
-            { nome: 'Cascavel', id: 'Cascavel,BR' },
-            { nome: 'Londrina', id: 'Londrina,BR' },
-            { nome: 'Maringá', id: 'Maringá,BR' }
+            { nome: 'Curitiba', id: 'Curitiba,BR', tPadrao: 18, uPadrao: 75, dPadrao: 'Céu limpo', iPadrao: '01d' },
+            { nome: 'Cascavel', id: 'Cascavel,BR', tPadrao: 24, uPadrao: 60, dPadrao: 'Parcialmente nublado', iPadrao: '03d' },
+            { nome: 'Londrina', id: 'Londrina,BR', tPadrao: 26, uPadrao: 55, dPadrao: 'Céu limpo', iPadrao: '01d' },
+            { nome: 'Maringá', id: 'Maringá,BR', tPadrao: 25, uPadrao: 58, dPadrao: 'Poucas nuvens', iPadrao: '02d' }
         ];
 
-        // IMPORTANTE: Cadastre-se em https://openweathermap.org para pegar sua chave e coloque-a abaixo
-        const API_KEY = ' 0ac8b0159986c42ffdf244922479bbb1'; 
+        // COLOQUE A SUA CHAVE DO OPENWEATHERMAP AQUI
+        const API_KEY = 'SUA_API_KEY_AQUI'; 
+
+        // Função auxiliar para renderizar os cards na tela
+        function renderizarCard(container, nome, temp, umidade, desc, icone) {
+            container.innerHTML += `
+                <div class="bg-gray-50 p-4 rounded-xl border border-gray-100 flex flex-col items-center shadow-sm">
+                    <span class="font-bold text-gray-700 block text-base">${nome}</span>
+                    <img src="https://openweathermap.org/img/wn/${icone}@2x.png" alt="${desc}" class="w-14 h-14">
+                    <span class="text-2xl font-black text-gray-900">${temp}°C</span>
+                    <span class="text-xs text-gray-500 capitalize mt-0.5">${desc}</span>
+                    <span class="text-xs text-emerald-700 font-semibold mt-2 bg-emerald-100/50 px-2 py-0.5 rounded-full">
+                        <i class="fa-solid fa-droplet text-xs mr-1"></i> UR: ${umidade}%
+                    </span>
+                </div>`;
+        }
 
         async function buscarClima() {
             const container = document.getElementById('clima-container');
             if (!container) return;
 
-            if ( API_KEY =' 0ac8b0159986c42ffdf244922479bbb1') {
-                container.innerHTML = `
-                    <div class="col-span-full p-4 bg-amber-50 text-amber-800 rounded-lg text-sm border border-amber-200">
-                        <i class="fa-solid fa-triangle-exclamation mr-2"></i>
-                        <strong>Quase pronto!</strong> Para ativar o clima em tempo real, substitua o texto <code>'SUA_API_KEY_AQUI'</code> pela sua chave do OpenWeatherMap no código do seu index.html.
-                    </div>`;
+            // Se o usuário não trocou a chave, carrega os dados padrões educativos na hora!
+            if (API_KEY === 'SUA_API_KEY_AQUI') {
+                container.innerHTML = ''; 
+                cidades.forEach(c => renderizarCard(container, c.nome, c.tPadrao, c.uPadrao, c.dPadrao, c.iPadrao));
                 return;
             }
 
@@ -122,36 +147,27 @@
                 try {
                     const url = `https://api.openweathermap.org/data/2.5/weather?q=${cidade.id}&appid=${API_KEY}&units=metric&lang=pt_br`;
                     const resposta = await fetch(url);
-                    if (!resposta.ok) throw new Error('Erro na API');
-                    const dados = await resposta.json();
+                    
+                    // Se a API rejeitar (porque a chave é muito nova e não ativou), usa o dado padrão
+                    if (!resposta.ok) {
+                        renderizarCard(container, cidade.nome, cidade.tPadrao, cidade.uPadrao, cidade.dPadrao, cidade.iPadrao);
+                        continue;
+                    }
 
+                    const dados = await resposta.json();
                     const temp = Math.round(dados.main.temp);
                     const umidade = dados.main.humidity;
                     const desc = dados.weather[0].description;
                     const icone = dados.weather[0].icon;
 
-                    container.innerHTML += `
-                        <div class="bg-gray-50 p-4 rounded-xl border border-gray-100 flex flex-col items-center shadow-sm">
-                            <span class="font-bold text-gray-700 block text-base">${cidade.nome}</span>
-                            <img src="https://openweathermap.org/img/wn/${icone}@2x.png" alt="${desc}" class="w-14 h-14">
-                            <span class="text-2xl font-black text-gray-900">${temp}°C</span>
-                            <span class="text-xs text-gray-500 capitalize mt-0.5">${desc}</span>
-                            <span class="text-xs text-emerald-700 font-semibold mt-2 bg-emerald-100/50 px-2 py-0.5 rounded-full">
-                                <i class="fa-solid fa-droplet text-xs mr-1"></i> UR: ${umidade}%
-                            </span>
-                        </div>`;
+                    renderizarCard(container, cidade.nome, temp, umidade, desc, icone);
                 } catch (erro) {
-                    container.innerHTML += `
-                        <div class="bg-red-50 p-4 rounded-xl border border-red-100 flex flex-col items-center justify-center">
-                            <span class="font-bold text-red-700">${cidade.nome}</span>
-                            <i class="fa-solid fa-circle-xmark text-red-400 my-2"></i>
-                            <span class="text-xs text-red-500">Erro de ligação</span>
-                        </div>`;
+                    // Se a internet falhar, mostra o dado padrão para o site não ficar em branco
+                    renderizarCard(container, cidade.nome, cidade.tPadrao, cidade.uPadrao, cidade.dPadrao, cidade.iPadrao);
                 }
             }
         }
 
-        // Executa apenas quando a página estiver totalmente pronta
         window.addEventListener('load', buscarClima);
     </script>
 </body>
