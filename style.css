@@ -1,139 +1,76 @@
-/* ===================================
-   VISUAL FUTURISTA
-=================================== */
-
-body{
-    background: linear-gradient(
-        135deg,
-        #071b2a,
-        #0d2b3e,
-        #071b2a
-    );
-
-    color: white;
-
-    font-family: Arial, Helvetica, sans-serif;
-
-    margin: 0;
-
-    padding: 0;
-
-    transition: 0.5s;
+*{
+    height:220px;
+    object-fit:cover;
 }
 
-/* ===================================
-   MODO ESCURO
-=================================== */
-
-body.dark-mode{
-    background: linear-gradient(
-        135deg,
-        #000000,
-        #121212,
-        #000000
-    );
+.card h3,
+.tech-card h3,
+.news-card h3,
+.article-card h3,
+.weather-card h3{
+    padding:20px 20px 10px;
 }
 
-/* TÍTULOS */
-.titulo{
-    color: #00ffcc;
-
-    text-shadow: 0 0 10px #00ffcc;
+.card p,
+.tech-card p,
+.news-card p,
+.article-card p,
+.weather-card p{
+    padding:0 20px 20px;
 }
 
-/* HEADER */
-header{
-    background: linear-gradient(
-        90deg,
-        #001f3f,
-        #005f73,
-        #001f3f
-    );
-
-    box-shadow: 0 0 20px #00ffcc;
-
-    text-align: center;
-
-    padding: 30px;
+section h2{
+    text-align:center;
+    font-size:3rem;
+    margin-top:80px;
 }
 
-/* MENU */
-nav{
-    background-color: rgba(0,0,0,0.7);
-
-    backdrop-filter: blur(10px);
-
-    border-bottom: 2px solid #00ffcc;
-
-    display: flex;
-
-    justify-content: center;
-
-    gap: 20px;
-
-    padding: 15px;
+.article-card a{
+    display:inline-block;
+    margin:20px;
+    padding:10px 20px;
+    background:#7CFC00;
+    color:black;
+    text-decoration:none;
+    border-radius:20px;
 }
 
-/* LINKS */
-nav a{
-    color: #00ffcc;
-
-    text-decoration: none;
-
-    font-weight: bold;
-
-    transition: 0.3s;
+.game-section{
+    text-align:center;
+    padding:80px 20px;
 }
 
-nav a:hover{
-    color: white;
-
-    text-shadow: 0 0 10px #00ffcc;
+#game-area{
+    width:90%;
+    height:400px;
+    background:#0d2418;
+    margin:30px auto;
+    border-radius:20px;
+    position:relative;
+    overflow:hidden;
 }
 
-/* BANNER */
-.banner{
-    height: 400px;
-
-    background-image: url("https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1400&auto=format&fit=crop");
-
-    background-size: cover;
-
-    background-position: center;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
+.tree{
+    position:absolute;
+    font-size:40px;
+    cursor:pointer;
 }
 
-.banner-texto{
-    background-color: rgba(0,0,0,0.7);
-
-    padding: 30px;
-
-    border-radius: 20px;
-
-    text-align: center;
-
-    width: 80%;
+footer{
+    text-align:center;
+    padding:30px;
+    background:black;
 }
 
-/* CARDS */
-.cards{
-    display: flex;
+@media(max-width:768px){
 
-    flex-wrap: wrap;
+    nav{
+        flex-direction:column;
+        gap:20px;
+    }
 
-    justify-content: center;
+    .hero h2{
+        font-size:2.5rem;
+    }
 
-    gap: 20px;
-
-    padding: 30px;
 }
-
-.card{
-    width: 320px;
-
-    background: rgba(255,255,255,0.
