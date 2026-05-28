@@ -57,7 +57,7 @@
                     <article class="bg-white rounded-lg overflow-hidden shadow p-5 border border-gray-100">
                         <span class="text-emerald-600 text-xs font-semibold uppercase">Sustentabilidade</span>
                         <h3 class="font-bold text-lg mt-1 mb-2">Plantio Direto</h3>
-                        <p class="text-gray-600 text-sm">Entenda os motivos que tornam o acreage e a conservação do solo paranaense uma referência nacional.</p>
+                        <p class="text-gray-600 text-sm">Entenda os motivos que tornam o manejo e a conservação do solo paranaense uma referência nacional.</p>
                     </article>
                 </div>
             </section>
@@ -80,18 +80,25 @@
                     <i class="fa-solid fa-video text-emerald-600 mr-2"></i> Vídeos e Entrevistas
                 </h2>
                 <div class="space-y-6">
-                    <div class="bg-white rounded-lg overflow-hidden shadow p-4 border border-gray-100 card-transicao">
-    <h3 class="font-bold text-gray-800 mb-2">Documentário: O Futuro Sustentável no Campo</h3>
-    
-    <video class="w-full h-48 rounded bg-black object-cover" controls poster="https://images.unsplash.com/photo-1530973428-5bf2db244121?auto=format&fit=crop&w=400&q=80">
-        <source src="https://player.vimeo.com/external/435674703.sd.mp4?s=7fca02d75f2849d4729eb9364bd536b5952b20f0&profile_id=165&oauth2_token_id=57447761" type="video/mp4">
-        Seu navegador não suporta a reprodução de vídeos.
-    </video>
-    
-    <div class="mt-2">
-        <p class="text-xs text-gray-500 mt-1">Imagens em alta definição demonstrando a força do maquinário agrícola trabalhando em harmonia com o solo e o meio ambiente.</p>
-    </div>
-</div>
+                    <div class="bg-white rounded-lg overflow-hidden shadow border border-gray-100 card-transicao p-4">
+                        <h3 class="font-bold text-gray-800 mb-3">Entrevista: O Futuro Sustentável com ILPF</h3>
+                        
+                        <div class="relative w-full h-48 rounded bg-cover bg-center flex items-center justify-center group cursor-pointer overflow-hidden" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1530973428-5bf2db244121?auto=format&fit=crop&w=500&q=80');">
+                            
+                            <a href="https://www.youtube.com/watch?v=gH-7Z_P6hG0" target="_blank" rel="noopener noreferrer" class="absolute inset-0 flex items-center justify-center z-10">
+                                <div class="bg-red-600 group-hover:bg-red-700 text-white w-16 h-12 rounded-xl flex items-center justify-center transition-all shadow-md transform group-hover:scale-110">
+                                    <i class="fa-solid fa-play text-xl ml-1"></i>
+                                </div>
+                            </a>
+                            
+                            <span class="absolute bottom-2 right-2 bg-black/70 text-white text-[10px] px-2 py-0.5 rounded">Assistir no YouTube <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-[8px]"></i></span>
+                        </div>
+                        
+                        <div class="mt-3">
+                            <p class="text-xs text-gray-500">Especialistas da Embrapa demonstram na prática o funcionamento do sistema Integração Lavoura-Pecuária-Floresta.</p>
+                        </div>
+                    </div>
+
                     <div class="bg-emerald-50 p-4 rounded-lg border-l-4 border-emerald-600">
                         <p class="italic text-gray-700">"Tecnologia e preservação ambiental caminham juntas no novo cenário agrícola do Paraná."</p>
                         <p class="text-sm font-bold mt-2 text-emerald-950">- Eng. Carlos Silva (Cascavel/PR)</p>
@@ -107,16 +114,14 @@
 
     <script>
         const cidades = [
-            { nome: 'Curitiba', id: 'Curitiba,BR', tPadrao: 18, uPadrao: 75, dPadrao: 'Céu limpo', iPadrao: '01d' },
-            { nome: 'Cascavel', id: 'Cascavel,BR', tPadrao: 24, uPadrao: 60, dPadrao: 'Parcialmente nublado', iPadrao: '03d' },
-            { nome: 'Londrina', id: 'Londrina,BR', tPadrao: 26, uPadrao: 55, dPadrao: 'Céu limpo', iPadrao: '01d' },
-            { nome: 'Maringá', id: 'Maringá,BR', tPadrao: 25, uPadrao: 58, dPadrao: 'Poucas nuvens', iPadrao: '02d' }
+            { nome: 'Curitiba', id: 'Curitiba,BR', tPadrao: 16, uPadrao: 82, dPadrao: 'Céu limpo', iPadrao: '01n' },
+            { nome: 'Cascavel', id: 'Cascavel,BR', tPadrao: 20, uPadrao: 73, dPadrao: 'Poucas nuvens', iPadrao: '02n' },
+            { nome: 'Londrina', id: 'Londrina,BR', tPadrao: 22, uPadrao: 68, dPadrao: 'Céu limpo', iPadrao: '01n' },
+            { nome: 'Maringá', id: 'Maringá,BR', tPadrao: 21, uPadrao: 70, dPadrao: 'Céu limpo', iPadrao: '01n' }
         ];
 
-        // COLOQUE A SUA CHAVE DO OPENWEATHERMAP AQUI
         const API_KEY = 'SUA_API_KEY_AQUI'; 
 
-        // Função auxiliar para renderizar os cards na tela
         function renderizarCard(container, nome, temp, umidade, desc, icone) {
             container.innerHTML += `
                 <div class="bg-gray-50 p-4 rounded-xl border border-gray-100 flex flex-col items-center shadow-sm">
@@ -134,7 +139,6 @@
             const container = document.getElementById('clima-container');
             if (!container) return;
 
-            // Se o usuário não trocou a chave, carrega os dados padrões educativos na hora!
             if (API_KEY === 'SUA_API_KEY_AQUI') {
                 container.innerHTML = ''; 
                 cidades.forEach(c => renderizarCard(container, c.nome, c.tPadrao, c.uPadrao, c.dPadrao, c.iPadrao));
@@ -148,7 +152,6 @@
                     const url = `https://api.openweathermap.org/data/2.5/weather?q=${cidade.id}&appid=${API_KEY}&units=metric&lang=pt_br`;
                     const resposta = await fetch(url);
                     
-                    // Se a API rejeitar (porque a chave é muito nova e não ativou), usa o dado padrão
                     if (!resposta.ok) {
                         renderizarCard(container, cidade.nome, cidade.tPadrao, cidade.uPadrao, cidade.dPadrao, cidade.iPadrao);
                         continue;
@@ -162,7 +165,6 @@
 
                     renderizarCard(container, cidade.nome, temp, umidade, desc, icone);
                 } catch (erro) {
-                    // Se a internet falhar, mostra o dado padrão para o site não ficar em branco
                     renderizarCard(container, cidade.nome, cidade.tPadrao, cidade.uPadrao, cidade.dPadrao, cidade.iPadrao);
                 }
             }
