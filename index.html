@@ -13,6 +13,93 @@
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans">
 
+    <header class="bg-emerald-900 text-white py-16 px-6 text-center bg-cover bg-center relative" style="background-image: linear-gradient(rgba(4, 47, 31, 0.85), rgba(4, 47, 31, 0.85)), url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1200&q=80');">
+        <div class="max-w-4xl mx-auto">
+            <span class="bg-emerald-600 text-xs font-bold uppercase px-3 py-1 rounded-full">Paraná Sustentável</span>
+            <h1 class="text-4xl md:text-6xl font-extrabold mt-4 mb-2">Agro Forte, Futuro Sustentável</h1>
+            <p class="text-xl md:text-2xl text-emerald-200 font-light">O equilíbrio perfeito entre a alta produção e a preservação do meio ambiente.</p>
+        </div>
+    </header>
+
+    <section class="max-w-7xl mx-auto px-4 -mt-8 relative z-10">
+        <div class="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
+            <h2 class="text-xl font-bold text-emerald-800 mb-4 text-center md:text-left">
+                <i class="fa-solid fa-cloud-sun-rain mr-2"></i> Clima em Tempo Real - Principais Cidades do PR
+            </h2>
+            <div id="clima-container" class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                <p class="col-span-full text-gray-500 animate-pulse py-4">Carregando dados meteorológicos...</p>
+            </div>
+        </div>
+    </section>
+
+    <main class="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 lg:grid-cols-3 gap-8">
+        
+        <div class="lg:col-span-2 space-y-12">
+            <section>
+                <h2 class="text-2xl font-bold text-gray-900 border-b-4 border-emerald-600 pb-2 mb-6">
+                    <i class="fa-solid fa-newspaper text-emerald-600 mr-2"></i> Artigos e Novidades
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <article class="bg-white rounded-lg overflow-hidden shadow">
+                        <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad451?auto=format&fit=crop&w=600&q=80" alt="Tecnologia" class="w-full h-48 object-cover">
+                        <div class="p-5">
+                            <span class="text-emerald-600 text-xs font-semibold uppercase">Tecnologia</span>
+                            <h3 class="font-bold text-lg mt-1 mb-2">Agricultura de Precisão e Redução de Insumos</h3>
+                            <p class="text-gray-600 text-sm line-clamp-3">O uso inteligente de sensores e drones ajudando o produtor do Paraná a economizar recursos naturais.</p>
+                        </div>
+                    </article>
+                    <article class="bg-white rounded-lg overflow-hidden shadow">
+                        <img src="https://images.unsplash.com/photo-1592417817098-8f3d6eb18865?auto=format&fit=crop&w=600&q=80" alt="Sustentabilidade" class="w-full h-48 object-cover">
+                        <div class="p-5">
+                            <span class="text-emerald-600 text-xs font-semibold uppercase">Sustentabilidade</span>
+                            <h3 class="font-bold text-lg mt-1 mb-2">Plantio Direto na Conservação do Solo</h3>
+                            <p class="text-gray-600 text-sm line-clamp-3">Entenda os motivos que tornam o manejo do solo paranaense uma referência em sustentabilidade.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-bold text-gray-900 border-b-4 border-emerald-600 pb-2 mb-6">
+                    <i class="fa-solid fa-tractor text-emerald-600 mr-2"></i> Novas Máquinas e Ecotecnologias
+                </h2>
+                <div class="bg-white p-6 rounded-xl shadow flex flex-col md:flex-row gap-6 items-center">
+                    <img src="https://images.unsplash.com/photo-1530595467537-0b5996c41f2d?auto=format&fit=crop&w=400&q=80" alt="Trator" class="w-full md:w-48 h-48 object-cover rounded-lg">
+                    <div>
+                        <span class="bg-amber-100 text-amber-800 text-xs px-2.5 py-0.5 rounded font-bold">Lançamento</span>
+                        <h3 class="text-xl font-bold mt-1 text-gray-800">Tratores Movidos a Biometano</h3>
+                        <p class="text-gray-600 mt-2">Maquinários de última geração reduzem drasticamente a pegada de carbono ao utilizar combustível gerado na própria fazenda.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="space-y-12">
+            <section>
+                <h2 class="text-2xl font-bold text-gray-900 border-b-4 border-emerald-600 pb-2 mb-6">
+                    <i class="fa-solid fa-video text-emerald-600 mr-2"></i> Vídeos e Entrevistas
+                </h2>
+                <div class="space-y-6">
+                    <div class="bg-white rounded-lg overflow-hidden shadow">
+                        <iframe class="w-full h-48" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Entrevista" frameborder="0" allowfullscreen></iframe>
+                        <div class="p-4">
+                            <h3 class="font-bold text-gray-800">Entrevista: O Futuro das Cooperativas</h3>
+                            <p class="text-xs text-gray-500 mt-1">Líderes do setor comentam as novas práticas de ESG no campo.</p>
+                        </div>
+                    </div>
+                    <div class="bg-emerald-50 p-4 rounded-lg border-l-4 border-emerald-600">
+                        <p class="italic text-gray-700">"Tecnologia e floresta em pé caminham juntas no novo cenário agrícola."</p>
+                        <p class="text-sm font-bold mt-2 text-emerald-950">- Eng. Carlos Silva (Cascavel/PR)</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="bg-gray-900 text-gray-400 text-center py-8 mt-12">
+        <p class="text-sm">&copy; 2026 - Agro Forte, Futuro Sustentável. Desenvolvido via GitHub Pages.</p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
