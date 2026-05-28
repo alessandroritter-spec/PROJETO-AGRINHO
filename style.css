@@ -1,58 +1,41 @@
-*{
+/* Estilos Customizados - Agro Forte, Futuro Sustentável */
+
+/* Suavizar a rolagem da página */
+html {
+    scroll-behavior: smooth;
 }
 
-section h2{
-    text-align:center;
-    font-size:3rem;
-    margin-top:80px;
+/* Efeito de transição suave para os cards de artigos e máquinas */
+article, .bg-white {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.article-card a{
-    display:inline-block;
-    margin:20px;
-    padding:10px 20px;
-    background:#7CFC00;
-    color:black;
-    text-decoration:none;
-    border-radius:20px;
+article:hover {
+    transform: translateY(-5px);
 }
 
-.game-section{
-    text-align:center;
-    padding:80px 20px;
+/* Customização da barra de rolagem (Scrollbar) para combinar com o tema Agro */
+::-webkit-scrollbar {
+    width: 10px;
 }
 
-#game-area{
-    width:90%;
-    height:400px;
-    background:#0d2418;
-    margin:30px auto;
-    border-radius:20px;
-    position:relative;
-    overflow:hidden;
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
 }
 
-.tree{
-    position:absolute;
-    font-size:40px;
-    cursor:pointer;
+::-webkit-scrollbar-thumb {
+    background: #047857; /* Verde Esmeralda */
+    border-radius: 5px;
 }
 
-footer{
-    text-align:center;
-    padding:30px;
-    background:black;
+::-webkit-scrollbar-thumb:hover {
+    background: #065f46; /* Verde Escuro */
 }
 
-@media(max-width:768px){
-
-    nav{
-        flex-direction:column;
-        gap:20px;
-    }
-
-    .hero h2{
-        font-size:2.5rem;
-    }
-
+/* Limitação de linhas para o resumo dos artigos (evita quebrar o layout) */
+.line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
 }
