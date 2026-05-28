@@ -1,62 +1,15 @@
-/* =========================
-   MODO ESCURO
-========================= */
+// ===================================
+// MODO ESCURO
+// ===================================
 
-.dark-mode{
-    background-color: #121212;
-    color: white;
-}
+document.addEventListener("DOMContentLoaded", () => {
 
-/* HEADER */
-.dark-mode header{
-    background: linear-gradient(to right, #111, #333);
-}
+    const botaoModo = document.getElementById("modoEscuro");
 
-/* MENU */
-.dark-mode nav{
-    background-color: #000;
-}
+    botaoModo.addEventListener("click", () => {
 
-/* CARDS */
-.dark-mode .card{
-    background-color: #1f1f1f;
-    color: white;
-}
+        document.body.classList.toggle("dark-mode");
 
-/* QUIZ */
-.dark-mode .quiz-container{
-    background-color: #1f1f1f;
-    color: white;
-}
+    });
 
-/* BOTÕES DO QUIZ */
-.dark-mode .quiz-container button{
-    background-color: #333;
-    color: white;
-}
-
-/* LISTA */
-.dark-mode .lista{
-    color: white;
-}
-
-/* FOOTER */
-.dark-mode footer{
-    background-color: #000;
-}
-
-/* LINKS */
-.dark-mode nav a{
-    color: white;
-}
-
-/* TEXTO DOS CARDS */
-.dark-mode .card h3{
-    color: #7CFC00;
-}
-
-/* BOTÃO MODO ESCURO */
-.dark-mode #modoEscuro{
-    background-color: #222;
-    color: white;
-}
+});
