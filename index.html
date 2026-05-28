@@ -1,307 +1,63 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-
+<html lang="pt-br">
 <head>
-
-    <!-- CONFIGURAÇÕES -->
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agro Forte - Futuro Sustentável</title>
 
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
 
-    <meta name="description"
-        content="Projeto Agrinho sobre tecnologias sustentáveis no agronegócio.">
-
-    <title>AgroTech Sustentável</title>
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="estilo.css">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-    <!-- CABEÇALHO -->
-    <header>
-
-        <h1>🌱 AgroTech Sustentável</h1>
-
-        <p>
-            Tecnologia e inovação para um agro mais sustentável.
-        </p>
-
-        <button
-            id="modoEscuro"
-            aria-label="Ativar modo escuro">
-
-            🌙 Modo Escuro
-
-        </button>
-
-    </header>
-
-    <!-- MENU -->
+<header>
     <nav>
+        <h1>🌱 Agro Forte</h1>
 
-        <a href="#tecnologias">Tecnologias</a>
-
-        <a href="#beneficios">Benefícios</a>
-
-        <a href="#quiz">Quiz</a>
-
-        <a href="#videos">Vídeos</a>
-
+        <ul>
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#tecnologia">Tecnologia</a></li>
+            <li><a href="#parana">Paraná</a></li>
+            <li><a href="#clima">Clima</a></li>
+            <li><a href="#artigos">Artigos</a></li>
+            <li><a href="#jogo">Jogo</a></li>
+        </ul>
     </nav>
+</header>
 
-    <!-- BANNER -->
-    <section class="banner">
+<section class="hero" id="inicio">
 
-        <div class="banner-texto">
+    <video autoplay muted loop>
+        <source src="videos/agro.mp4" type="video/mp4">
+    </video>
 
-            <h2>O futuro do agro já começou</h2>
+    <div class="overlay"></div>
 
-            <p>
-                Conheça tecnologias que ajudam a preservar
-                o meio ambiente e aumentar a produtividade no campo.
-            </p>
-
-        </div>
-
-    </section>
-
-    <!-- CONTEÚDO PRINCIPAL -->
-    <main>
-
-        <!-- TECNOLOGIAS -->
-        <section id="tecnologias">
-
-            <h2 class="titulo">
-                🌿 Tecnologias Sustentáveis
-            </h2>
-
-            <div class="cards">
-
-                <!-- CARD 1 -->
-                <div class="card">
-
-                    <img
-                        src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1200&auto=format&fit=crop"
-                        alt="Agricultura de Precisão">
-
-                    <h3>Agricultura de Precisão</h3>
-
-                    <p>
-                        Utiliza sensores e GPS para aplicar
-                        fertilizantes e água somente onde necessário,
-                        evitando desperdícios.
-                    </p>
-
-                </div>
-
-                <!-- CARD 2 -->
-                <div class="card">
-
-                    <img
-                        src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?q=80&w=1200&auto=format&fit=crop"
-                        alt="Drones Agrícolas">
-
-                    <h3>Drones Agrícolas</h3>
-
-                    <p>
-                        Os drones monitoram plantações,
-                        detectam pragas e ajudam no uso consciente
-                        de defensivos agrícolas.
-                    </p>
-
-                </div>
-
-                <!-- CARD 3 -->
-                <div class="card">
-
-                    <img
-                        src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop"
-                        alt="Energia Solar">
-
-                    <h3>Energia Solar</h3>
-
-                    <p>
-                        A energia solar reduz custos e diminui
-                        impactos ambientais nas propriedades rurais.
-                    </p>
-
-                </div>
-
-                <!-- CARD 4 -->
-                <div class="card">
-
-                    <img
-                        src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?q=80&w=1200&auto=format&fit=crop"
-                        alt="Irrigação Inteligente">
-
-                    <h3>Irrigação Inteligente</h3>
-
-                    <p>
-                        Sistemas automáticos utilizam sensores
-                        para economizar água e irrigar no momento correto.
-                    </p>
-
-                </div>
-
-                <!-- CARD 5 -->
-                <div class="card">
-
-                    <img
-                        src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop"
-                        alt="IoT no Agro">
-
-                    <h3>IoT no Agro</h3>
-
-                    <p>
-                        Sensores conectados monitoram temperatura,
-                        umidade e qualidade do solo em tempo real.
-                    </p>
-
-                </div>
-
-                <!-- CARD 6 -->
-                <div class="card">
-
-                    <img
-                        src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=1200&auto=format&fit=crop"
-                        alt="IA no Agro">
-
-                    <h3>Inteligência Artificial</h3>
-
-                    <p>
-                        A IA ajuda produtores a prever colheitas,
-                        identificar doenças e melhorar a produção agrícola.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </section>
-
-        <!-- BENEFÍCIOS -->
-        <section id="beneficios">
-
-            <h2 class="titulo">
-                ✅ Benefícios da Tecnologia no Agro
-            </h2>
-
-            <ul class="lista">
-
-                <li>🌎 Redução do impacto ambiental</li>
-
-                <li>💧 Economia de água</li>
-
-                <li>⚡ Uso de energia limpa</li>
-
-                <li>🚜 Maior produtividade</li>
-
-                <li>🌱 Produção mais sustentável</li>
-
-                <li>📡 Monitoramento inteligente das plantações</li>
-
-            </ul>
-
-        </section>
-
-        <!-- QUIZ -->
-        <section id="quiz">
-
-            <h2 class="titulo">
-                🎮 Quiz Sustentável
-            </h2>
-
-            <div class="quiz-container">
-
-                <h3 id="pergunta"></h3>
-
-                <div id="respostas"></div>
-
-                <button id="proxima">
-
-                    Próxima Pergunta
-
-                </button>
-
-                <p id="pontuacao"></p>
-
-            </div>
-
-        </section>
-
-        <!-- VÍDEOS -->
-        <section id="videos">
-
-            <h2 class="titulo">
-                🎥 Tecnologias do Futuro no Agro
-            </h2>
-
-            <div class="videos-container">
-
-                <!-- VIDEO 1 -->
-                <div class="video-card">
-
-                    <iframe
-                        src="https://www.youtube.com/embed/5u4xTa3LR2U"
-                        title="Tecnologia no Agro"
-                        loading="lazy"
-                        allowfullscreen>
-                    </iframe>
-
-                    <h3>Drones na Agricultura</h3>
-
-                </div>
-
-                <!-- VIDEO 2 -->
-                <div class="video-card">
-
-                    <iframe
-                        src="https://www.youtube.com/embed/WC4JYwL4M1A"
-                        title="Agricultura Inteligente"
-                        loading="lazy"
-                        allowfullscreen>
-                    </iframe>
-
-                    <h3>Agricultura Inteligente</h3>
-
-                </div>
-
-                <!-- VIDEO 3 -->
-                <div class="video-card">
-
-                    <iframe
-                        src="https://www.youtube.com/embed/N3j7ddc0D7Q"
-                        title="Energia Solar"
-                        loading="lazy"
-                        allowfullscreen>
-                    </iframe>
-
-                    <h3>Energia Solar no Campo</h3>
-
-                </div>
-
-            </div>
-
-        </section>
-
-    </main>
-
-    <!-- RODAPÉ -->
-    <footer>
+    <div class="hero-content">
+        <h2>Agro Forte, Futuro Sustentável</h2>
 
         <p>
-            Projeto desenvolvido para o Concurso Agrinho 2026 🌱
+            Equilíbrio entre produção agrícola,
+            inovação tecnológica e preservação ambiental.
         </p>
 
-    </footer>
+        <button onclick="scrollToSection('tecnologia')">
+            Explorar Projeto
+        </button>
+    </div>
+</section>
 
-    <!-- JAVASCRIPT -->
-    <script src="script.js"></script>
+<section class="cards">
 
-</body>
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1200&auto=format&fit=crop" alt="Agricultura">
 
+        <h3>Agricultura Inteligente</h3>
+
+        <p>
+            Uso de sensores, drones e inteligência artificial no campo.
+        </p>
 </html>
