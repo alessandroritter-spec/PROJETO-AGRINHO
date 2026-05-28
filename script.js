@@ -1,310 +1,40 @@
-// ======================================
-// AGUARDA CARREGAMENTO DA PÁGINA
-// ======================================
+function scrollToSection(id){
 
-document.addEventListener("DOMContentLoaded", () => {
-
-    // ======================================
-    // MODO ESCURO
-    // ======================================
-
-    const botaoModo = document.getElementById("modoEscuro");
-
-    if (botaoModo) {
-
-        botaoModo.addEventListener("click", () => {
-
-            document.body.classList.toggle("dark-mode");
-
-        });
-
-    }
-
-    // ======================================
-    // ELEMENTOS DO QUIZ
-    // ======================================
-
-    const perguntaElemento =
-        document.getElementById("pergunta");
-
-    const respostasElemento =
-        document.getElementById("respostas");
-
-    const pontuacaoElemento =
-        document.getElementById("pontuacao");
-
-    const botaoProxima =
-        document.getElementById("proxima");
-
-    // Verifica se os elementos existem
-    if (
-        !perguntaElemento ||
-        !respostasElemento ||
-        !pontuacaoElemento ||
-        !botaoProxima
-    ) {
-
-        console.error("Elementos do quiz não encontrados.");
-
-        return;
-    }
-
-    // ======================================
-    // PERGUNTAS
-    // ======================================
-
-    const perguntas = [
-
-        {
-            pergunta:
-                "Qual tecnologia ajuda a economizar água no campo?",
-
-            respostas: [
-                "Irrigação Inteligente",
-                "Computador Gamer",
-                "Impressora"
-            ],
-
-            correta: 0
-        },
-
-        {
-            pergunta:
-                "Qual tecnologia utiliza sensores no agro?",
-
-            respostas: [
-                "IoT",
-                "DVD",
-                "Televisão"
-            ],
-
-            correta: 0
-        },
-
-        {
-            pergunta:
-                "Qual energia é considerada limpa?",
-
-            respostas: [
-                "Carvão",
-                "Solar",
-                "Gasolina"
-            ],
-
-            correta: 1
-        },
-
-        {
-            pergunta:
-                "O uso de drones no agro ajuda em:",
-
-            respostas: [
-                "Monitoramento da plantação",
-                "Aumentar lixo",
-                "Desmatar áreas"
-            ],
-
-            correta: 0
-        }
-
-    ];
-
-    // ======================================
-    // VARIÁVEIS
-    // ======================================
-
-    let perguntaAtual = 0;
-    let pontos = 0;
-    let respondeu = false;
-
-    // ======================================
-    // CARREGAR PERGUNTA
-    // ======================================
-
-    function carregarPergunta() {
-
-        respondeu = false;
-
-        respostasElemento.innerHTML = "";
-
-        const pergunta =
-            perguntas[perguntaAtual];
-
-        perguntaElemento.textContent =
-            pergunta.pergunta;
-
-        pergunta.respostas.forEach(
-            (resposta, indice) => {
-
-                const botao =
-                    document.createElement("button");
-
-                botao.textContent = resposta;
-
-                botao.classList.add("resposta-btn");
-
-                botao.addEventListener(
-                    "click",
-                    () => verificarResposta(indice)
-                );
-
-                respostasElemento.appendChild(botao);
-
-            }
-        );
-
-    }
-
-    // ======================================
-    // VERIFICAR RESPOSTA
-    // ======================================
-
-    function verificarResposta(indiceSelecionado) {
-
-        if (respondeu) {
-            return;
-        }
-
-        respondeu = true;
-
-        const respostaCorreta =
-            perguntas[perguntaAtual].correta;
-
-        const botoes =
-            respostasElemento.querySelectorAll("button");
-
-        botoes.forEach((botao, indice) => {
-
-            botao.disabled = true;
-
-            // Resposta correta
-            if (indice === respostaCorreta) {
-
-                botao.style.backgroundColor = "#00c853";
-
-                botao.style.color = "white";
-
-            }
-
-            // Resposta errada
-            if (
-                indice === indiceSelecionado &&
-                indice !== respostaCorreta
-            ) {
-
-                botao.style.backgroundColor = "#d50000";
-
-                botao.style.color = "white";
-
-            }
-
-        });
-
-        // Atualiza pontuação
-        if (indiceSelecionado === respostaCorreta) {
-
-            pontos++;
-
-            pontuacaoElemento.innerHTML =
-                "✅ Resposta correta!";
-
-        } else {
-
-            pontuacaoElemento.innerHTML =
-                "❌ Resposta incorreta!";
-
-        }
-
-    }
-
-    // ======================================
-    // PRÓXIMA PERGUNTA
-    // ======================================
-
-    botaoProxima.addEventListener("click", () => {
-
-        if (!respondeu) {
-
-            alert(
-                "Responda a pergunta antes de continuar!"
-            );
-
-            return;
-
-        }
-
-        perguntaAtual++;
-
-        // Próxima pergunta
-        if (perguntaAtual < perguntas.length) {
-
-            carregarPergunta();
-
-            pontuacaoElemento.innerHTML = "";
-
-        } else {
-
-            finalizarQuiz();
-
-        }
-
+    document.getElementById(id).scrollIntoView({
+        behavior:'smooth'
     });
 
-    // ======================================
-    // FINALIZAR QUIZ
-    // ======================================
+}
 
-    function finalizarQuiz() {
+// ===============================
+// HORA EM TEMPO REAL
+// ===============================
 
-        perguntaElemento.innerHTML =
-            "🎉 Quiz Finalizado!";
+function atualizarHora(){
 
-        respostasElemento.innerHTML = "";
+    const agora = new Date();
 
-        pontuacaoElemento.innerHTML =
-            `
-            🏆 Você acertou
-            <strong>${pontos}</strong>
-            de
-            <strong>${perguntas.length}</strong>
-            perguntas!
-            `;
+    const hora = agora.toLocaleTimeString('pt-BR');
 
-        botaoProxima.innerText =
-            "🔄 Reiniciar Quiz";
+    document.getElementById('hora-cascavel').innerHTML = 'Hora: ' + hora;
+    document.getElementById('hora-curitiba').innerHTML = 'Hora: ' + hora;
+    document.getElementById('hora-londrina').innerHTML = 'Hora: ' + hora;
 
-        botaoProxima.addEventListener(
-            "click",
-            reiniciarQuiz
-        );
+}
 
-    }
+setInterval(atualizarHora,1000);
 
-    // ======================================
-    // REINICIAR QUIZ
-    // ======================================
+// ===============================
+// TEMPERATURA REAL
+// ===============================
 
-    function reiniciarQuiz() {
+async function buscarTemperatura(){
 
-        perguntaAtual = 0;
+    try{
 
-        pontos = 0;
+        // CASCAVEL
+        const cascavel = await fetch('https://api.open-meteo.com/v1/forecast?latitude=-24.95&longitude=-53.45&current_weather=true');
+        const dadosCascavel = await cascavel.json();
 
-        respondeu = false;
-
-        botaoProxima.innerText =
-            "Próxima Pergunta";
-
-        pontuacaoElemento.innerHTML = "";
-
-        carregarPergunta();
-
-    }
-
-    // ======================================
-    // INICIAR QUIZ
-    // ======================================
-
-    carregarPergunta();
-
-});
+        document.getElementById('temp-cascavel').innerHTML =
+            'Temperatura: ' + dadosCascavel.current_weather.temperature + '°C';
