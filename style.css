@@ -1,38 +1,34 @@
-/* Estilos Customizados - Agro Forte, Futuro Sustentável */
-
-/* Suavizar a rolagem da página */
+/* Correções de Layout e Transições */
 html {
     scroll-behavior: smooth;
 }
 
-/* Efeito de transição suave para os cards de artigos e máquinas */
+/* Transições suaves para evitar travamento visual */
 article, .bg-white {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
 article:hover {
-    transform: translateY(-5px);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
-/* Customização da barra de rolagem (Scrollbar) para combinar com o tema Agro */
+/* Scrollbar personalizada */
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 8px;
 }
-
 ::-webkit-scrollbar-track {
     background: #f1f1f1;
 }
-
 ::-webkit-scrollbar-thumb {
-    background: #047857; /* Verde Esmeralda */
-    border-radius: 5px;
+    background: #059669;
+    border-radius: 4px;
 }
-
 ::-webkit-scrollbar-thumb:hover {
-    background: #065f46; /* Verde Escuro */
+    background: #047857;
 }
 
-/* Limitação de linhas para o resumo dos artigos (evita quebrar o layout) */
+/* Garante corte elegante de texto */
 .line-clamp-3 {
     display: -webkit-box;
     -webkit-line-clamp: 3;
