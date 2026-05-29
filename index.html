@@ -1,93 +1,81 @@
+# index.html
+
+```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Agro Forte, Futuro Sustentável</title>
 
 <script src="https://cdn.tailwindcss.com"></script>
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <style>
-
 html{
-    scroll-behavior:smooth;
+scroll-behavior:smooth;
 }
 
 body{
-    font-family:Arial, Helvetica, sans-serif;
+font-family:Arial, sans-serif;
 }
 
-.card{
-    transition:0.3s;
+.card-hover{
+transition:0.3s;
 }
 
-.card:hover{
-    transform:translateY(-5px);
-    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+.card-hover:hover{
+transform:translateY(-5px);
+box-shadow:0 10px 20px rgba(0,0,0,0.2);
 }
 
+.galeria-img{
+height:260px;
+width:100%;
+object-fit:cover;
+border-radius:20px;
+}
 </style>
 </head>
 
 <body class="bg-gray-100 text-gray-800">
 
 <!-- MENU -->
-
 <nav class="bg-emerald-900 text-white sticky top-0 z-50 shadow-lg">
-
 <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
 
-<h1 class="font-black text-2xl">
+<h1 class="text-2xl font-black">
 🌱 Agro Forte
 </h1>
 
-<button class="md:hidden text-2xl" onclick="toggleMenu()">
+<button onclick="toggleMenu()" class="md:hidden text-2xl">
 <i class="fa-solid fa-bars"></i>
 </button>
 
 <ul class="hidden md:flex gap-6 font-bold text-sm">
-
-<li><a href="#inicio" class="hover:text-emerald-300">Início</a></li>
-
-<li><a href="#artigos" class="hover:text-emerald-300">Artigos</a></li>
-
-<li><a href="#novidades" class="hover:text-emerald-300">Novidades</a></li>
-
-<li><a href="#galeria" class="hover:text-emerald-300">Galeria</a></li>
-
-<li><a href="#videos" class="hover:text-emerald-300">Vídeos</a></li>
-
-<li><a href="#game" class="hover:text-emerald-300">Jogo</a></li>
-
-</ul>
-
-</div>
-
-<ul id="menuMobile"
-class="hidden flex-col gap-4 bg-emerald-800 p-4 md:hidden font-bold text-sm">
-
 <li><a href="#inicio">Início</a></li>
 <li><a href="#artigos">Artigos</a></li>
 <li><a href="#novidades">Novidades</a></li>
 <li><a href="#galeria">Galeria</a></li>
 <li><a href="#videos">Vídeos</a></li>
 <li><a href="#game">Jogo</a></li>
-
 </ul>
 
+</div>
+
+<ul id="menuMobile" class="hidden flex-col bg-emerald-800 p-4 gap-4 md:hidden font-bold text-sm">
+<li><a href="#inicio">Início</a></li>
+<li><a href="#artigos">Artigos</a></li>
+<li><a href="#novidades">Novidades</a></li>
+<li><a href="#galeria">Galeria</a></li>
+<li><a href="#videos">Vídeos</a></li>
+<li><a href="#game">Jogo</a></li>
+</ul>
 </nav>
 
 <!-- HEADER -->
-
-<header id="inicio"
-class="bg-[url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1400')] bg-cover bg-center">
-
+<header id="inicio" class="bg-[url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1400')] bg-cover bg-center">
 <div class="bg-black/60">
-
 <div class="max-w-6xl mx-auto py-28 px-6 text-center text-white">
 
 <h1 class="text-5xl md:text-7xl font-black mb-6">
@@ -95,471 +83,277 @@ Agro Forte, Futuro Sustentável
 </h1>
 
 <p class="text-xl md:text-2xl text-emerald-200">
-O equilíbrio perfeito entre produção e meio ambiente.
+Equilíbrio entre produção e meio ambiente.
 </p>
 
 </div>
-
 </div>
-
 </header>
 
 <!-- CLIMA -->
-
 <section class="max-w-7xl mx-auto p-6 -mt-10 relative z-10">
-
 <div class="bg-white rounded-2xl shadow-xl p-6">
 
 <h2 class="text-2xl font-black text-emerald-800 mb-6 text-center">
-
 <i class="fa-solid fa-cloud-sun-rain"></i>
 Clima do Paraná
-
 </h2>
 
 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
 
 <div class="bg-gray-100 rounded-xl p-5 text-center">
-
-<h3 class="font-bold mb-2">Curitiba</h3>
-
-<div id="icon-curitiba" class="text-3xl mb-2">
-<i class="fa-solid fa-sun text-yellow-500"></i>
+<h3 class="font-bold">Curitiba</h3>
+<div class="text-3xl my-2">
+<i class="fa-solid fa-cloud-sun text-yellow-500"></i>
 </div>
-
-<p id="temp-curitiba" class="text-3xl font-black">
-19°C
-</p>
-
-<p id="ur-curitiba" class="text-sm text-emerald-700">
-UR: 72%
-</p>
-
+<p class="text-3xl font-black">19°C</p>
+<p class="text-sm text-emerald-700">UR: 72%</p>
 </div>
 
 <div class="bg-gray-100 rounded-xl p-5 text-center">
-
-<h3 class="font-bold mb-2">Cascavel</h3>
-
-<div id="icon-cascavel" class="text-3xl mb-2">
-<i class="fa-solid fa-cloud-sun text-gray-500"></i>
+<h3 class="font-bold">Cascavel</h3>
+<div class="text-3xl my-2">
+<i class="fa-solid fa-sun text-yellow-500"></i>
 </div>
-
-<p id="temp-cascavel" class="text-3xl font-black">
-24°C
-</p>
-
-<p id="ur-cascavel" class="text-sm text-emerald-700">
-UR: 65%
-</p>
-
+<p class="text-3xl font-black">24°C</p>
+<p class="text-sm text-emerald-700">UR: 65%</p>
 </div>
 
 <div class="bg-gray-100 rounded-xl p-5 text-center">
-
-<h3 class="font-bold mb-2">Londrina</h3>
-
-<div id="icon-londrina" class="text-3xl mb-2">
+<h3 class="font-bold">Londrina</h3>
+<div class="text-3xl my-2">
 <i class="fa-solid fa-sun text-yellow-500"></i>
 </div>
-
-<p id="temp-londrina" class="text-3xl font-black">
-26°C
-</p>
-
-<p id="ur-londrina" class="text-sm text-emerald-700">
-UR: 58%
-</p>
-
+<p class="text-3xl font-black">26°C</p>
+<p class="text-sm text-emerald-700">UR: 58%</p>
 </div>
 
 <div class="bg-gray-100 rounded-xl p-5 text-center">
-
-<h3 class="font-bold mb-2">Maringá</h3>
-
-<div id="icon-maringa" class="text-3xl mb-2">
-<i class="fa-solid fa-sun text-yellow-500"></i>
+<h3 class="font-bold">Maringá</h3>
+<div class="text-3xl my-2">
+<i class="fa-solid fa-cloud text-gray-500"></i>
 </div>
-
-<p id="temp-maringa" class="text-3xl font-black">
-27°C
-</p>
-
-<p id="ur-maringa" class="text-sm text-emerald-700">
-UR: 55%
-</p>
-
+<p class="text-3xl font-black">27°C</p>
+<p class="text-sm text-emerald-700">UR: 55%</p>
 </div>
 
 </div>
-
 </div>
-
 </section>
 
-<!-- CONTEÚDO -->
-
-<main class="max-w-7xl mx-auto px-6 py-14">
+<main class="max-w-7xl mx-auto px-6 py-16">
 
 <!-- ARTIGOS -->
-
 <section id="artigos" class="mb-20">
-
-<h2 class="text-4xl font-black mb-10 text-emerald-800">
-
+<h2 class="text-4xl font-black text-emerald-800 mb-10">
 📰 Artigos e Novidades
-
 </h2>
 
 <div class="grid md:grid-cols-2 gap-8">
 
-<div onclick="abrirArtigo(
-'Agricultura de Precisão',
-'A agricultura de precisão usa drones, sensores e inteligência artificial para economizar água, fertilizantes e aumentar a produtividade.'
-)"
-class="bg-white p-6 rounded-2xl shadow-lg cursor-pointer card">
+<div class="bg-white rounded-2xl p-6 shadow-xl cursor-pointer card-hover"
+onclick="abrirArtigo('Agricultura de Precisão','A agricultura de precisão utiliza sensores, drones e inteligência artificial para aumentar a produtividade e reduzir desperdícios no campo.')">
 
-<img
-src="https://images.unsplash.com/photo-1592982537447-7440770cbfc9?q=80&w=1200"
-class="rounded-xl mb-4 h-60 w-full object-cover">
+<img src="https://images.unsplash.com/photo-1592982537447-7440770cbfc9?q=80&w=1200" class="galeria-img mb-4">
 
-<h3 class="text-2xl font-black mb-3">
-⚡ Agricultura de Precisão
-</h3>
+<h3 class="text-2xl font-black mb-2">⚡ Agricultura de Precisão</h3>
 
-<p class="text-gray-600">
-Clique para ler mais...
-</p>
+<p class="text-gray-600">Clique para abrir o artigo.</p>
 
 </div>
 
-<div onclick="abrirArtigo(
-'Sistema de Plantio Direto',
-'O plantio direto reduz erosão, conserva umidade e protege o solo agrícola.'
-)"
-class="bg-white p-6 rounded-2xl shadow-lg cursor-pointer card">
+<div class="bg-white rounded-2xl p-6 shadow-xl cursor-pointer card-hover"
+onclick="abrirArtigo('Plantio Direto','O sistema de plantio direto reduz erosão do solo e conserva a umidade natural da terra.')">
 
-<img
-src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200"
-class="rounded-xl mb-4 h-60 w-full object-cover">
+<img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200" class="galeria-img mb-4">
 
-<h3 class="text-2xl font-black mb-3">
-🌱 Plantio Direto
-</h3>
+<h3 class="text-2xl font-black mb-2">🌱 Plantio Direto</h3>
 
-<p class="text-gray-600">
-Clique para ler mais...
-</p>
+<p class="text-gray-600">Clique para abrir o artigo.</p>
 
 </div>
 
 </div>
-
 </section>
 
 <!-- NOVIDADES -->
-
 <section id="novidades" class="mb-20">
-
-<h2 class="text-4xl font-black mb-10 text-emerald-800">
-
+<h2 class="text-4xl font-black text-emerald-800 mb-10">
 🚜 Novidades do Campo
-
 </h2>
 
 <div class="grid md:grid-cols-2 gap-8">
 
-<div class="bg-white p-6 rounded-2xl shadow-lg card">
-
-<img
-src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1200"
-class="rounded-xl mb-4 h-60 w-full object-cover">
-
-<h3 class="text-2xl font-black mb-3">
-Biometano no Campo
-</h3>
-
-<p>
-Tratores modernos agora utilizam energia limpa gerada na própria fazenda.
-</p>
-
+<div class="bg-white rounded-2xl p-6 shadow-xl card-hover">
+<img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1200" class="galeria-img mb-4">
+<h3 class="text-2xl font-black mb-2">Biometano</h3>
+<p>Fazendas começam a produzir combustível sustentável usando resíduos orgânicos.</p>
 </div>
 
-<div class="bg-white p-6 rounded-2xl shadow-lg card">
-
-<img
-src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?q=80&w=1200"
-class="rounded-xl mb-4 h-60 w-full object-cover">
-
-<h3 class="text-2xl font-black mb-3">
-Sistema ILPF
-</h3>
-
-<p>
-Integração entre lavoura, pecuária e floresta melhora a sustentabilidade.
-</p>
-
+<div class="bg-white rounded-2xl p-6 shadow-xl card-hover">
+<img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?q=80&w=1200" class="galeria-img mb-4">
+<h3 class="text-2xl font-black mb-2">Sistema ILPF</h3>
+<p>Integração entre lavoura, pecuária e floresta melhora o meio ambiente.</p>
 </div>
 
 </div>
-
 </section>
 
 <!-- GALERIA -->
-
 <section id="galeria" class="mb-20">
-
-<h2 class="text-4xl font-black mb-10 text-emerald-800">
-
+<h2 class="text-4xl font-black text-emerald-800 mb-10">
 📸 Galeria Sustentável
-
 </h2>
 
 <div class="grid md:grid-cols-3 gap-6">
 
-<img
-src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1200"
-class="rounded-2xl shadow-lg h-72 object-cover w-full card">
+<img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1200" class="galeria-img shadow-xl card-hover">
 
-<img
-src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?q=80&w=1200"
-class="rounded-2xl shadow-lg h-72 object-cover w-full card">
+<img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?q=80&w=1200" class="galeria-img shadow-xl card-hover">
 
-<img
-src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1200"
-class="rounded-2xl shadow-lg h-72 object-cover w-full card">
+<img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1200" class="galeria-img shadow-xl card-hover">
 
 </div>
-
 </section>
 
-<!-- VÍDEO -->
-
+<!-- VIDEO -->
 <section id="videos" class="mb-20">
-
-<h2 class="text-4xl font-black mb-10 text-emerald-800">
-
-🎥 Vídeos Educativos
-
+<h2 class="text-4xl font-black text-emerald-800 mb-10">
+🎥 Vídeo Educativo
 </h2>
 
 <div class="bg-white rounded-2xl shadow-xl p-6">
-
 <div class="aspect-video">
 
 <iframe
 class="w-full h-full rounded-2xl"
 src="https://www.youtube.com/embed/6M2nK5q7w6Y"
-title="Vídeo Agro"
 allowfullscreen>
 </iframe>
 
 </div>
-
 </div>
-
 </section>
 
 <!-- GAME -->
-
 <section id="game" class="mb-20">
-
-<h2 class="text-4xl font-black mb-10 text-emerald-800">
-
+<h2 class="text-4xl font-black text-emerald-800 mb-10">
 🎮 Missão Sustentável
-
 </h2>
 
 <div class="bg-emerald-900 text-white rounded-2xl p-8 shadow-xl">
 
 <div class="grid md:grid-cols-2 gap-6 mb-8">
 
-<div class="bg-yellow-500 text-black rounded-xl p-4 text-center">
-
-<h3 class="font-black">
-💰 Lucro
-</h3>
-
-<p id="txt-lucro" class="text-4xl font-black">
-50%
-</p>
-
+<div class="bg-yellow-500 text-black rounded-xl p-5 text-center">
+<h3 class="font-black">💰 Lucro</h3>
+<p id="txt-lucro" class="text-4xl font-black">50%</p>
 </div>
 
-<div class="bg-green-500 text-black rounded-xl p-4 text-center">
-
-<h3 class="font-black">
-🌳 Natureza
-</h3>
-
-<p id="txt-natureza" class="text-4xl font-black">
-50%
-</p>
-
+<div class="bg-green-500 text-black rounded-xl p-5 text-center">
+<h3 class="font-black">🌳 Natureza</h3>
+<p id="txt-natureza" class="text-4xl font-black">50%</p>
 </div>
 
 </div>
 
-<p id="txt-cenario"
-class="mb-6 text-xl font-bold">
-
+<p id="txt-cenario" class="text-xl font-bold mb-6">
 Pragas surgiram na plantação. O que fazer?
-
 </p>
 
-<div id="container-botoes-sim"
-class="grid md:grid-cols-2 gap-4">
+<div id="container-botoes" class="grid md:grid-cols-2 gap-4">
 
 <button onclick="decidir(30,-30)"
 class="bg-red-600 hover:bg-red-700 p-4 rounded-xl font-bold">
-
 Usar químicos pesados
-
 </button>
 
 <button onclick="decidir(20,30)"
 class="bg-green-600 hover:bg-green-700 p-4 rounded-xl font-bold">
-
 Controle biológico inteligente
-
 </button>
 
 </div>
-
 </div>
-
 </section>
 
 </main>
 
 <!-- MODAL -->
-
-<div id="modalArtigo"
-class="hidden fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-6">
+<div id="modal" class="hidden fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-6">
 
 <div class="bg-white rounded-2xl max-w-2xl w-full p-8 relative">
 
-<button onclick="fecharModal()"
-class="absolute top-4 right-4 text-2xl">
-
+<button onclick="fecharModal()" class="absolute top-4 right-4 text-2xl">
 ✖
-
 </button>
 
-<h2 id="tituloModal"
-class="text-3xl font-black mb-6 text-emerald-800">
+<h2 id="tituloModal" class="text-3xl font-black mb-6 text-emerald-800"></h2>
 
-</h2>
-
-<p id="textoModal"
-class="text-gray-700 leading-relaxed text-lg">
-
-</p>
+<p id="textoModal" class="text-gray-700 text-lg leading-relaxed"></p>
 
 </div>
-
 </div>
-
-<!-- FOOTER -->
 
 <footer class="bg-gray-900 text-white text-center py-8">
-
-<p>
 © 2026 - Agro Forte, Futuro Sustentável
-</p>
-
 </footer>
-
-<!-- SCRIPT -->
 
 <script>
 
 function toggleMenu(){
-
-document
-.getElementById("menuMobile")
-.classList.toggle("hidden");
-
+document.getElementById('menuMobile').classList.toggle('hidden');
 }
 
 function abrirArtigo(titulo,texto){
-
-document.getElementById("tituloModal").innerText=titulo;
-
-document.getElementById("textoModal").innerText=texto;
-
-document
-.getElementById("modalArtigo")
-.classList.remove("hidden");
-
+document.getElementById('tituloModal').innerText=titulo;
+document.getElementById('textoModal').innerText=texto;
+document.getElementById('modal').classList.remove('hidden');
 }
 
 function fecharModal(){
-
-document
-.getElementById("modalArtigo")
-.classList.add("hidden");
-
+document.getElementById('modal').classList.add('hidden');
 }
 
 let lucro=50;
 let natureza=50;
 
-function decidir(pontosLucro,pontosNatureza){
+function decidir(valorLucro,valorNatureza){
 
-lucro=Math.min(100,Math.max(0,lucro+pontosLucro));
+lucro=Math.min(100,Math.max(0,lucro+valorLucro));
 
-natureza=Math.min(100,Math.max(0,natureza+pontosNatureza));
+natureza=Math.min(100,Math.max(0,natureza+valorNatureza));
 
-document.getElementById("txt-lucro").innerText=lucro+"%";
+document.getElementById('txt-lucro').innerText=lucro+'%';
+document.getElementById('txt-natureza').innerText=natureza+'%';
 
-document.getElementById("txt-natureza").innerText=natureza+"%";
-
-const cenario=document.getElementById("txt-cenario");
-
-const botoes=document.getElementById("container-botoes-sim");
+const cenario=document.getElementById('txt-cenario');
+const botoes=document.getElementById('container-botoes');
 
 if(lucro>=70 && natureza>=70){
 
-cenario.innerHTML=
-"🏆 Parabéns! Você alcançou o equilíbrio sustentável!";
+cenario.innerHTML='🏆 Você venceu e criou uma fazenda sustentável!';
 
 botoes.innerHTML=`
-
-<button
-onclick="location.reload()"
-class="bg-white text-emerald-900 font-black p-4 rounded-xl">
-
+<button onclick="location.reload()"
+class="bg-white text-emerald-900 p-4 rounded-xl font-black">
 Jogar Novamente
-
-</button>
-
-`;
+</button>`;
 
 }else{
 
-cenario.innerHTML=
-"🌧️ Uma seca atingiu a região. Como economizar água?";
+cenario.innerHTML='🌧️ Uma seca atingiu a região. Como economizar água?';
 
 botoes.innerHTML=`
-
-<button
-onclick="decidir(10,-20)"
+<button onclick="decidir(10,-20)"
 class="bg-red-600 hover:bg-red-700 p-4 rounded-xl font-bold">
-
 Irrigar 24 horas
-
 </button>
 
-<button
-onclick="decidir(20,30)"
+<button onclick="decidir(20,30)"
 class="bg-green-600 hover:bg-green-700 p-4 rounded-xl font-bold">
-
 Irrigação inteligente
-
-</button>
-
-`;
+</button>`;
 
 }
 
@@ -569,3 +363,6 @@ Irrigação inteligente
 
 </body>
 </html>
+```
+✅ Layout responsivo
+✅ Compatível com GitHub Pages
