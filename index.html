@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Agro Forte - Futuro Sustentável</title>
 
@@ -24,7 +25,7 @@
 
 body{
     font-family:'Poppins', sans-serif;
-    background:#f5fff5;
+    background:#f4fff4;
     color:#222;
     overflow-x:hidden;
 }
@@ -35,12 +36,12 @@ body{
 
 header{
     width:100%;
-    background:linear-gradient(135deg,#0a5f2c,#1f8f3c,#52b788);
-    padding:20px 8%;
     position:fixed;
     top:0;
     left:0;
     z-index:1000;
+    padding:20px 8%;
+    background:linear-gradient(135deg,#0a5f2c,#1f8f3c,#52b788);
     box-shadow:0 4px 10px rgba(0,0,0,0.2);
 }
 
@@ -51,9 +52,9 @@ nav{
 }
 
 .logo{
+    color:white;
     font-size:2rem;
     font-weight:700;
-    color:white;
 }
 
 .logo span{
@@ -62,8 +63,8 @@ nav{
 
 nav ul{
     display:flex;
-    gap:25px;
     list-style:none;
+    gap:25px;
 }
 
 nav ul li a{
@@ -87,11 +88,15 @@ nav ul li a:hover{
     justify-content:center;
     align-items:center;
     text-align:center;
-    background:
-    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-    url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1600&auto=format&fit=crop') center/cover;
     color:white;
     padding:120px 20px 50px;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1600&auto=format&fit=crop');
+
+    background-size:cover;
+    background-position:center;
 }
 
 .hero-content h1{
@@ -100,30 +105,30 @@ nav ul li a:hover{
 }
 
 .hero-content p{
-    font-size:1.3rem;
-    max-width:800px;
+    max-width:850px;
     margin:auto;
+    font-size:1.3rem;
     margin-bottom:30px;
 }
 
 .btn{
     display:inline-block;
     padding:15px 35px;
+    border-radius:40px;
     background:#d8ff9d;
     color:#0a5f2c;
-    border-radius:40px;
     text-decoration:none;
     font-weight:700;
     transition:0.3s;
 }
 
 .btn:hover{
-    transform:scale(1.05);
     background:white;
+    transform:scale(1.05);
 }
 
 /* =========================
-   SECTIONS
+   SECTION
 ========================= */
 
 section{
@@ -141,8 +146,8 @@ section{
 }
 
 .section-title p{
-    margin-top:10px;
     color:#555;
+    margin-top:10px;
 }
 
 /* =========================
@@ -158,8 +163,7 @@ section{
 .card{
     background:white;
     border-radius:20px;
-    padding:30px;
-    text-align:center;
+    padding:25px;
     box-shadow:0 5px 15px rgba(0,0,0,0.1);
     transition:0.4s;
 }
@@ -170,7 +174,7 @@ section{
 
 .card img{
     width:100%;
-    height:180px;
+    height:200px;
     object-fit:cover;
     border-radius:15px;
     margin-bottom:20px;
@@ -191,23 +195,29 @@ section{
 
 .tech-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
     gap:30px;
 }
 
 .tech-item{
     background:white;
-    padding:20px;
     border-radius:20px;
-    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    overflow:hidden;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+    padding:20px;
 }
 
 .tech-item iframe{
     width:100%;
-    height:220px;
+    height:230px;
     border:none;
     border-radius:15px;
     margin-bottom:15px;
+}
+
+.tech-item h3{
+    color:#0a5f2c;
+    margin-bottom:10px;
 }
 
 /* =========================
@@ -215,11 +225,11 @@ section{
 ========================= */
 
 .weather{
-    text-align:center;
     background:linear-gradient(135deg,#52b788,#95d5b2);
-    color:white;
     border-radius:25px;
-    padding:40px;
+    padding:50px;
+    color:white;
+    text-align:center;
 }
 
 .weather h3{
@@ -230,6 +240,7 @@ section{
 .temp{
     font-size:4rem;
     font-weight:bold;
+    margin-bottom:10px;
 }
 
 /* =========================
@@ -241,8 +252,8 @@ section{
 }
 
 #game{
-    margin:auto;
     display:block;
+    margin:auto;
     background:#8fd694;
     border:5px solid #0a5f2c;
     border-radius:20px;
@@ -262,7 +273,12 @@ section{
     background:white;
     border-radius:20px;
     overflow:hidden;
-    box-shadow:0 4px 15px rgba(0,0,0,0.1);
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.news-card:hover{
+    transform:translateY(-10px);
 }
 
 .news-card img{
@@ -321,6 +337,7 @@ nav ul{
 <!-- HEADER -->
 
 <header>
+
 <nav>
 
 <div class="logo">
@@ -337,6 +354,7 @@ nav ul{
 </ul>
 
 </nav>
+
 </header>
 
 <!-- HERO -->
@@ -348,7 +366,7 @@ nav ul{
 <h1>Agro Forte, Futuro Sustentável</h1>
 
 <p>
-Equilíbrio entre produção agrícola, tecnologia e preservação ambiental para construir o futuro do planeta.
+Equilíbrio entre produção agrícola, tecnologia e preservação ambiental para construir um futuro melhor.
 </p>
 
 <a href="#sustentabilidade" class="btn">
@@ -364,34 +382,51 @@ Explorar Projeto
 <section id="sustentabilidade">
 
 <div class="section-title">
+
 <h2>🌎 Sustentabilidade no Campo</h2>
-<p>Produzir alimentos preservando o meio ambiente.</p>
+
+<p>
+Produzir alimentos preservando o meio ambiente.
+</p>
+
 </div>
 
 <div class="cards">
 
 <div class="card">
+
 <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1200&auto=format&fit=crop">
+
 <h3>Irrigação Inteligente</h3>
+
 <p>
-Uso consciente da água com sensores e monitoramento.
+Uso consciente da água através de sensores modernos.
 </p>
+
 </div>
 
 <div class="card">
+
 <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?q=80&w=1200&auto=format&fit=crop">
+
 <h3>Energia Limpa</h3>
+
 <p>
 Fazendas utilizando energia solar e renovável.
 </p>
+
 </div>
 
 <div class="card">
+
 <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop">
+
 <h3>Preservação Ambiental</h3>
+
 <p>
-Proteção das florestas, rios e biodiversidade.
+Proteção de rios, matas e biodiversidade.
 </p>
+
 </div>
 
 </div>
@@ -403,46 +438,45 @@ Proteção das florestas, rios e biodiversidade.
 <section class="tech" id="tecnologia">
 
 <div class="section-title">
+
 <h2>🤖 Tecnologia no Agro</h2>
-<p>O futuro da agricultura inteligente.</p>
+
+<p>
+O futuro da agricultura inteligente.
+</p>
+
 </div>
 
 <div class="tech-grid">
 
 <div class="tech-item">
 
-<div class="tech-item">
-
-<iframe 
-width="100%" 
-height="220"
-src="https://www.youtube.com/embed/DGHn2uOAVCE"
-title="Máquinas Inteligentes no Agro"
-frameborder="0"
-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+<iframe
+src="https://www.youtube.com/embed/6mRbDEtDoyA"
+title="Drones Agrícolas"
 allowfullscreen>
 </iframe>
 
-<h3>Máquinas Inteligentes</h3>
+<h3>Drones Agrícolas</h3>
 
 <p>
-Automação agrícola, tratores modernos e tecnologia aplicada à produção sustentável.
+Monitoramento das lavouras com drones de alta precisão.
 </p>
 
 </div>
 
 <div class="tech-item">
 
-<iframe 
-src="https://youtu.be/xyOAjOtAs5M?si=5ww2YCWoRuoRrDJ5"
-title="Máquinas Agrícolas Inteligentes"
+<iframe
+src="https://www.youtube.com/embed/ZJ4c1iQ8i64"
+title="Máquinas Inteligentes"
 allowfullscreen>
 </iframe>
 
 <h3>Máquinas Inteligentes</h3>
 
 <p>
-Automação e eficiência para produção sustentável.
+Tratores automatizados e tecnologia sustentável no campo.
 </p>
 
 </div>
@@ -456,8 +490,13 @@ Automação e eficiência para produção sustentável.
 <section id="clima">
 
 <div class="section-title">
+
 <h2>🌦️ Clima Atual</h2>
-<p>Monitoramento climático do Paraná.</p>
+
+<p>
+Monitoramento climático do Paraná.
+</p>
+
 </div>
 
 <div class="weather">
@@ -476,13 +515,18 @@ Tempo ensolarado ☀️
 
 </section>
 
-<!-- GAME -->
+<!-- JOGO -->
 
 <section class="game-section" id="jogo">
 
 <div class="section-title">
+
 <h2>🎮 Fazenda Sustentável</h2>
-<p>Recolha árvores e preserve o meio ambiente.</p>
+
+<p>
+Colete árvores e preserve o meio ambiente.
+</p>
+
 </div>
 
 <canvas id="game" width="700" height="400"></canvas>
@@ -494,8 +538,13 @@ Tempo ensolarado ☀️
 <section id="noticias">
 
 <div class="section-title">
+
 <h2>📰 Novidades do Agro</h2>
-<p>Inovação, sustentabilidade e tecnologia.</p>
+
+<p>
+Tecnologia, inovação e sustentabilidade.
+</p>
+
 </div>
 
 <div class="news-grid">
@@ -509,7 +558,7 @@ Tempo ensolarado ☀️
 <h3>Energia Solar no Campo</h3>
 
 <p>
-Fazendas brasileiras investem em energia renovável.
+Fazendas brasileiras ampliam investimentos em energia limpa.
 </p>
 
 </div>
@@ -525,7 +574,7 @@ Fazendas brasileiras investem em energia renovável.
 <h3>Agricultura Inteligente</h3>
 
 <p>
-Tecnologias aumentam produtividade com sustentabilidade.
+Novas tecnologias aumentam a produtividade sustentável.
 </p>
 
 </div>
@@ -567,7 +616,7 @@ Projetos de reflorestamento crescem no Brasil.
 <script>
 
 /* =========================
-   CLIMA DINÂMICO
+   CLIMA
 ========================= */
 
 const temperaturas = [
@@ -594,8 +643,8 @@ function atualizarClima(){
     climas[Math.floor(Math.random() * climas.length)];
 
     document.getElementById("temperatura").innerText = temp;
-
     document.getElementById("climaTexto").innerText = clima;
+
 }
 
 setInterval(atualizarClima,4000);
@@ -613,33 +662,32 @@ let player = {
     width:50,
     height:50,
     color:"#0a5f2c",
-    speed:6
+    speed:8
 };
 
 let trees = [];
+let score = 0;
 
 function createTree(){
 
     trees.push({
         x:700,
         y:Math.random() * 350,
-        size:30
+        size:25
     });
 
 }
 
 setInterval(createTree,1500);
 
-let score = 0;
-
 document.addEventListener("keydown",(e)=>{
 
     if(e.key === "ArrowUp"){
-        player.y -= player.speed * 5;
+        player.y -= player.speed;
     }
 
     if(e.key === "ArrowDown"){
-        player.y += player.speed * 5;
+        player.y += player.speed;
     }
 
 });
@@ -663,11 +711,17 @@ function drawTrees(){
 
     trees.forEach((tree,index)=>{
 
-        tree.x -= 3;
+        tree.x -= 4;
 
         ctx.beginPath();
 
-        ctx.arc(tree.x,tree.y,tree.size,0,Math.PI*2);
+        ctx.arc(
+            tree.x,
+            tree.y,
+            tree.size,
+            0,
+            Math.PI * 2
+        );
 
         ctx.fill();
 
@@ -679,7 +733,6 @@ function drawTrees(){
         ){
 
             trees.splice(index,1);
-
             score++;
 
         }
@@ -691,7 +744,6 @@ function drawTrees(){
 function drawScore(){
 
     ctx.fillStyle = "black";
-
     ctx.font = "25px Poppins";
 
     ctx.fillText(
@@ -707,9 +759,7 @@ function gameLoop(){
     ctx.clearRect(0,0,700,400);
 
     drawPlayer();
-
     drawTrees();
-
     drawScore();
 
     requestAnimationFrame(gameLoop);
