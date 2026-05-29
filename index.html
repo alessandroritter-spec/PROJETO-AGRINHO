@@ -364,5 +364,127 @@ Irrigação inteligente
 </body>
 </html>
 ```
-✅ Layout responsivo
-✅ Compatível com GitHub Pages
+
+# MELHORIAS NECESSÁRIAS
+
+Substitua o conteúdo do arquivo atual por esta versão atualizada abaixo.
+
+```html
+<!-- SUBSTITUIR APENAS O BLOCO DO VÍDEO -->
+<section id="videos" class="mb-20">
+<h2 class="text-4xl font-black text-emerald-800 mb-10">
+🎥 Vídeo Educativo
+</h2>
+
+<div class="bg-white rounded-2xl shadow-xl p-6">
+
+<video controls autoplay muted loop class="w-full rounded-2xl shadow-lg">
+<source src="https://cdn.pixabay.com/video/2022/11/01/137131-776814803_large.mp4" type="video/mp4">
+Seu navegador não suporta vídeo.
+</video>
+
+<p class="mt-4 text-gray-600">
+Vídeo demonstrando agricultura sustentável e tecnologia no campo.
+</p>
+
+</div>
+</section>
+
+<!-- SUBSTITUIR BLOCO DE CLIMA -->
+<section class="max-w-7xl mx-auto p-6 -mt-10 relative z-10">
+<div class="bg-white rounded-2xl shadow-xl p-6">
+
+<h2 class="text-2xl font-black text-emerald-800 mb-6 text-center">
+<i class="fa-solid fa-cloud-sun-rain"></i>
+Clima em Tempo Real - Paraná
+</h2>
+
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+
+<div class="bg-gradient-to-br from-blue-500 to-cyan-400 text-white rounded-2xl p-6 text-center shadow-lg">
+<h3 class="font-black text-xl mb-2">Curitiba</h3>
+<i class="fa-solid fa-cloud-rain text-5xl mb-4"></i>
+<p id="temp-curitiba" class="text-4xl font-black">--°C</p>
+<p id="ur-curitiba">Carregando...</p>
+</div>
+
+<div class="bg-gradient-to-br from-yellow-400 to-orange-500 text-white rounded-2xl p-6 text-center shadow-lg">
+<h3 class="font-black text-xl mb-2">Cascavel</h3>
+<i class="fa-solid fa-sun text-5xl mb-4"></i>
+<p id="temp-cascavel" class="text-4xl font-black">--°C</p>
+<p id="ur-cascavel">Carregando...</p>
+</div>
+
+<div class="bg-gradient-to-br from-orange-500 to-red-500 text-white rounded-2xl p-6 text-center shadow-lg">
+<h3 class="font-black text-xl mb-2">Londrina</h3>
+<i class="fa-solid fa-sun text-5xl mb-4"></i>
+<p id="temp-londrina" class="text-4xl font-black">--°C</p>
+<p id="ur-londrina">Carregando...</p>
+</div>
+
+<div class="bg-gradient-to-br from-cyan-500 to-blue-600 text-white rounded-2xl p-6 text-center shadow-lg">
+<h3 class="font-black text-xl mb-2">Maringá</h3>
+<i class="fa-solid fa-cloud-sun text-5xl mb-4"></i>
+<p id="temp-maringa" class="text-4xl font-black">--°C</p>
+<p id="ur-maringa">Carregando...</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- SUBSTITUIR GALERIA -->
+<section id="galeria" class="mb-20">
+<h2 class="text-4xl font-black text-emerald-800 mb-10">
+📸 Galeria Sustentável
+</h2>
+
+<div class="grid md:grid-cols-3 gap-8">
+
+<div class="overflow-hidden rounded-3xl shadow-2xl card-hover">
+<img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1400" class="h-80 w-full object-cover">
+</div>
+
+<div class="overflow-hidden rounded-3xl shadow-2xl card-hover">
+<img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?q=80&w=1400" class="h-80 w-full object-cover">
+</div>
+
+<div class="overflow-hidden rounded-3xl shadow-2xl card-hover">
+<img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1400" class="h-80 w-full object-cover">
+</div>
+
+</div>
+</section>
+
+<!-- SUBSTITUIR SCRIPT FINAL -->
+<script>
+
+function toggleMenu(){
+document.getElementById('menuMobile').classList.toggle('hidden');
+}
+
+function abrirArtigo(titulo,texto){
+document.getElementById('tituloModal').innerText=titulo;
+document.getElementById('textoModal').innerText=texto;
+document.getElementById('modal').classList.remove('hidden');
+}
+
+function fecharModal(){
+document.getElementById('modal').classList.add('hidden');
+}
+
+// CLIMA TEMPO REAL
+const apiKey='SUA_API_OPENWEATHER';
+
+async function carregarCidade(cidade,id){
+
+try{
+
+const resposta=await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cidade},BR&units=metric&appid=${apiKey}&lang=pt_br`);
+
+const dados=await resposta.json();
+
+document.getElementById(`temp-${id}`).innerText=Math.round(dados.main.temp)+'°C';
+
+document.getElementById(`ur-${id}`).innerText='Umidade: '+dado
+```
