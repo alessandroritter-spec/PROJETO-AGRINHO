@@ -35,7 +35,30 @@
                 <i class="fa-solid fa-cloud-sun-rain mr-2"></i> Clima em Tempo Real - Principais Cidades do PR
             </h2>
             <div id="clima-container" class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-                <p class="col-span-full text-gray-500 py-4 animate-pulse">A carregar dados meteorológicos...</p>
+                <div class="bg-gray-50 p-4 rounded-xl border border-gray-100 flex flex-col items-center shadow-sm">
+                    <span class="font-bold text-gray-700 block text-sm">Curitiba</span>
+                    <i class="fa-solid fa-sun text-amber-500 text-2xl my-2"></i>
+                    <span class="text-xl font-black text-gray-900">19°C</span>
+                    <span class="text-[10px] text-emerald-700 font-semibold bg-emerald-100 px-2 py-0.5 rounded-full mt-1">UR: 72%</span>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-xl border border-gray-100 flex flex-col items-center shadow-sm">
+                    <span class="font-bold text-gray-700 block text-sm">Cascavel</span>
+                    <i class="fa-solid fa-cloud-sun text-gray-400 text-2xl my-2"></i>
+                    <span class="text-xl font-black text-gray-900">24°C</span>
+                    <span class="text-[10px] text-emerald-700 font-semibold bg-emerald-100 px-2 py-0.5 rounded-full mt-1">UR: 65%</span>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-xl border border-gray-100 flex flex-col items-center shadow-sm">
+                    <span class="font-bold text-gray-700 block text-sm">Londrina</span>
+                    <i class="fa-solid fa-sun text-amber-500 text-2xl my-2"></i>
+                    <span class="text-xl font-black text-gray-900">26°C</span>
+                    <span class="text-[10px] text-emerald-700 font-semibold bg-emerald-100 px-2 py-0.5 rounded-full mt-1">UR: 58%</span>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-xl border border-gray-100 flex flex-col items-center shadow-sm">
+                    <span class="font-bold text-gray-700 block text-sm">Maringá</span>
+                    <i class="fa-solid fa-sun text-amber-500 text-2xl my-2"></i>
+                    <span class="text-xl font-black text-gray-900">27°C</span>
+                    <span class="text-[10px] text-emerald-700 font-semibold bg-emerald-100 px-2 py-0.5 rounded-full mt-1">UR: 55%</span>
+                </div>
             </div>
         </div>
     </section>
@@ -44,28 +67,56 @@
         
         <div class="lg:col-span-2 space-y-12">
             
-            <section class="bg-emerald-900 text-white p-6 rounded-2xl shadow-xl space-y-8">
+            <section class="bg-emerald-900 text-white p-6 rounded-2xl shadow-xl space-y-6">
                 <div class="text-center border-b border-emerald-700 pb-4">
-                    <h2 class="text-2xl md:text-3xl font-black"><i class="fa-solid fa-gamepad mr-2 text-amber-400"></i> Espaço Gamificado Agrinho</h2>
-                    <p class="text-sm text-emerald-200 mt-1">Aprenda jogando sobre o equilíbrio no campo!</p>
+                    <h2 class="text-2xl font-black text-white flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-gamepad text-amber-400"></i> Espaço Gamificado Agrinho
+                    </h2>
+                    <p class="text-xs text-emerald-200 mt-1">Aprenda jogando sobre o equilíbrio no campo!</p>
                 </div>
 
-                <div class="bg-white text-gray-800 p-5 rounded-xl shadow">
-                    <h3 class="text-lg font-bold text-emerald-900 mb-3"><i class="fa-solid fa-circle-question mr-1 text-emerald-600"></i> 1. Quiz do Agro Sustentável</h3>
-                    <div id="quiz-box">
-                        <p id="quiz-pergunta" class="font-semibold text-base mb-4 text-gray-700"></p>
+                <div class="bg-white text-gray-800 p-5 rounded-xl shadow border border-gray-100">
+                    <h3 class="text-base font-bold text-emerald-900 mb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-circle-question text-emerald-600"></i> 1. Quiz do Agro Sustentável
+                    </h3>
+                    <div class="bg-gray-50 p-4 rounded-lg border border-gray-100">
+                        <p id="quiz-pergunta" class="font-semibold text-sm mb-4 text-gray-700"></p>
                         <div id="quiz-opcoes" class="space-y-2"></div>
-                        <p id="quiz-feedback" class="mt-4 text-sm font-bold hidden p-3 rounded-lg"></p>
-                        <button id="btn-proxima" onclick="proximaPergunta()" class="mt-4 bg-emerald-600 text-white font-bold py-2 px-4 rounded-lg hidden hover:bg-emerald-700 transition-colors w-full">Próxima Pergunta</button>
+                        <p id="quiz-feedback" class="mt-4 text-xs font-bold hidden p-3 rounded-lg"></p>
+                        <button id="btn-proxima" onclick="proximaPergunta()" class="mt-4 bg-emerald-600 text-white font-bold py-2 px-4 rounded-lg hidden hover:bg-emerald-700 transition-colors w-full text-xs">Próxima Pergunta</button>
                     </div>
                 </div>
 
-                <div class="bg-white text-gray-800 p-5 rounded-xl shadow">
-                    <h3 class="text-lg font-bold text-emerald-900 mb-3"><i class="fa-solid fa-sliders mr-1 text-emerald-600"></i> 2. Missão Equilíbrio Verde</h3>
+                <div class="bg-white text-gray-800 p-5 rounded-xl shadow border border-gray-100">
+                    <h3 class="text-base font-bold text-emerald-900 mb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-sliders text-emerald-600"></i> 2. Missão Equilíbrio Verde
+                    </h3>
                     
                     <div class="grid grid-cols-2 gap-4 mb-4 text-center">
                         <div class="bg-amber-50 p-2 rounded border border-amber-200">
-                            <span class="text-xs font-bold text-amber-800 block">💰 Lucro / Produção</span>
-                            <span id="status-producao" class="text-xl font-black text-amber-600">50%</span>
+                            <span class="text-[10px] font-bold text-amber-800 block uppercase">💰 Lucro / Produção</span>
+                            <span id="status-producao" class="text-lg font-black text-amber-600">50%</span>
                         </div>
-                        <div class="
+                        <div class="bg-emerald-50 p-2 rounded border border-emerald-200">
+                            <span class="text-[10px] font-bold text-emerald-800 block uppercase">🌳 Saúde Ambiental</span>
+                            <span id="status-ambiente" class="text-lg font-black text-emerald-600">50%</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg border border-gray-200 text-center">
+                        <p id="sim-cenario" class="font-medium text-xs text-gray-700 mb-4"></p>
+                        <div id="sim-botoes" class="grid grid-cols-1 sm:grid-cols-2 gap-2"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-bold text-gray-900 border-b-4 border-emerald-600 pb-2 mb-6 flex items-center gap-2">
+                    <i class="fa-solid fa-newspaper text-emerald-600"></i> Artigos Pedagógicos
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <article class="bg-white rounded-xl shadow-sm border border-gray-200 p-5 flex flex-col justify-between card-transicao">
+                        <div>
+                            <span class="text-emerald-600 text-xs font-bold uppercase tracking-wider block mb-1">Tecnologia</span>
+                            <h3 class="font-bold text-lg text-gray-900 mb-2">⚡ Agricultura de Precisão</h3>
+                            <p class="
