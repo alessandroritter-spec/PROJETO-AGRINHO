@@ -31,266 +31,30 @@
                 <i class="fa-solid fa-cloud-sun-rain mr-2"></i> Clima em Tempo Real - Principais Cidades do PR
             </h2>
             <div id="bloco-clima" class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                
                 <div class="bg-gray-50 p-4 rounded-xl border border-gray-100 flex flex-col items-center shadow-sm">
                     <span class="font-bold text-gray-700 block text-sm">Curitiba</span>
-                    <i class="fa-solid fa-sun text-amber-500 text-2xl my-2"></i>
-                    <span class="text-xl font-black text-gray-900">19°C</span>
-                    <span class="text-[10px] text-emerald-700 font-semibold bg-emerald-100 px-2 py-0.5 rounded-full mt-1">UR: 72%</span>
+                    <div id="icon-curitiba"><i class="fa-solid fa-circle-notch fa-spin text-emerald-600 text-2xl my-2"></i></div>
+                    <span id="temp-curitiba" class="text-xl font-black text-gray-900">--°C</span>
+                    <span id="ur-curitiba" class="text-[10px] text-emerald-700 font-semibold bg-emerald-100 px-2 py-0.5 rounded-full mt-1">UR: --%</span>
                 </div>
+
                 <div class="bg-gray-50 p-4 rounded-xl border border-gray-100 flex flex-col items-center shadow-sm">
                     <span class="font-bold text-gray-700 block text-sm">Cascavel</span>
-                    <i class="fa-solid fa-cloud-sun text-gray-400 text-2xl my-2"></i>
-                    <span class="text-xl font-black text-gray-900">24°C</span>
-                    <span class="text-[10px] text-emerald-700 font-semibold bg-emerald-100 px-2 py-0.5 rounded-full mt-1">UR: 65%</span>
+                    <div id="icon-cascavel"><i class="fa-solid fa-circle-notch fa-spin text-emerald-600 text-2xl my-2"></i></div>
+                    <span id="temp-cascavel" class="text-xl font-black text-gray-900">--°C</span>
+                    <span id="ur-cascavel" class="text-[10px] text-emerald-700 font-semibold bg-emerald-100 px-2 py-0.5 rounded-full mt-1">UR: --%</span>
                 </div>
+
                 <div class="bg-gray-50 p-4 rounded-xl border border-gray-100 flex flex-col items-center shadow-sm">
                     <span class="font-bold text-gray-700 block text-sm">Londrina</span>
-                    <i class="fa-solid fa-sun text-amber-500 text-2xl my-2"></i>
-                    <span class="text-xl font-black text-gray-900">26°C</span>
-                    <span class="text-[10px] text-emerald-700 font-semibold bg-emerald-100 px-2 py-0.5 rounded-full mt-1">UR: 58%</span>
+                    <div id="icon-londrina"><i class="fa-solid fa-circle-notch fa-spin text-emerald-600 text-2xl my-2"></i></div>
+                    <span id="temp-londrina" class="text-xl font-black text-gray-900">--°C</span>
+                    <span id="ur-londrina" class="text-[10px] text-emerald-700 font-semibold bg-emerald-100 px-2 py-0.5 rounded-full mt-1">UR: --%</span>
                 </div>
+
                 <div class="bg-gray-50 p-4 rounded-xl border border-gray-100 flex flex-col items-center shadow-sm">
                     <span class="font-bold text-gray-700 block text-sm">Maringá</span>
-                    <i class="fa-solid fa-sun text-amber-500 text-2xl my-2"></i>
-                    <span class="text-xl font-black text-gray-900">27°C</span>
-                    <span class="text-[10px] text-emerald-700 font-semibold bg-emerald-100 px-2 py-0.5 rounded-full mt-1">UR: 55%</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <main class="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 lg:grid-cols-3 gap-8">
-        
-        <div class="lg:col-span-2 space-y-12">
-            
-            <section class="bg-emerald-900 text-white p-6 rounded-2xl shadow-xl space-y-6">
-                <div class="text-center border-b border-emerald-700 pb-4">
-                    <h2 class="text-2xl font-black text-white flex items-center justify-center gap-2">
-                        <i class="fa-solid fa-gamepad text-amber-400"></i> Espaço Gamificado Agrinho
-                    </h2>
-                    <p class="text-xs text-emerald-200 mt-1">Aprenda jogando sobre o equilíbrio no campo!</p>
-                </div>
-
-                <div class="bg-white text-gray-800 p-5 rounded-xl shadow">
-                    <h3 class="text-base font-bold text-emerald-900 mb-3 flex items-center gap-2">
-                        <i class="fa-solid fa-circle-question text-emerald-600"></i> 1. Quiz do Agro Sustentável
-                    </h3>
-                    <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
-                        <p class="font-semibold text-sm mb-4 text-gray-700">Qual o principal benefício da Agricultura de Precisão?</p>
-                        <div class="space-y-2">
-                            <button onclick="responderQuiz(false)" class="w-full text-left bg-white hover:bg-red-50 p-2.5 rounded border border-gray-200 text-xs font-medium text-gray-700 transition-colors">A) Aplicar o dobro de insumos químicos para acelerar o crescimento de qualquer forma.</button>
-                            <button onclick="responderQuiz(true)" class="w-full text-left bg-white hover:bg-emerald-50 p-2.5 rounded border border-gray-200 text-xs font-medium text-gray-700 transition-colors">B) Economizar recursos e aplicar fertilizantes de forma exata e cirúrgica onde a planta precisa.</button>
-                            <button onclick="responderQuiz(false)" class="w-full text-left bg-white hover:bg-red-50 p-2.5 rounded border border-gray-200 text-xs font-medium text-gray-700 transition-colors">C) Substituir todas as plantações tradicionais do ecossistema por estufas e robôs artificiais.</button>
-                        </div>
-                        <p id="quiz-feedback-fixo" class="mt-4 text-xs font-bold hidden p-3 rounded-lg"></p>
-                    </div>
-                </div>
-
-                <div class="bg-white text-gray-800 p-5 rounded-xl shadow">
-                    <h3 class="text-base font-bold text-emerald-900 mb-3 flex items-center gap-2">
-                        <i class="fa-solid fa-sliders text-emerald-600"></i> 2. Missão Equilíbrio Verde
-                    </h3>
-                    <div class="grid grid-cols-2 gap-4 mb-4 text-center">
-                        <div class="bg-amber-50 p-2 rounded border border-amber-200">
-                            <span class="text-[10px] font-bold text-amber-800 block uppercase">💰 Lucro da Fazenda</span>
-                            <span id="txt-lucro" class="text-lg font-black text-amber-600">50%</span>
-                        </div>
-                        <div class="bg-emerald-50 p-2 rounded border border-emerald-200">
-                            <span class="text-[10px] font-bold text-emerald-800 block uppercase">🌳 Saúde da Natureza</span>
-                            <span id="txt-natureza" class="text-lg font-black text-emerald-600">50%</span>
-                        </div>
-                    </div>
-                    <div class="bg-gray-50 p-4 rounded-lg border border-gray-200 text-center">
-                        <p id="txt-cenario" class="font-medium text-xs text-gray-700 mb-4">Pragas começaram a surgir na sua lavoura de soja. O que você faz?</p>
-                        <div id="container-botoes-sim" class="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                            <button onclick="decidir(30, -30)" class="bg-white hover:bg-amber-600 hover:text-white p-2.5 rounded border border-gray-200 text-xs text-gray-700 transition-all font-medium">Pulverizar defensivos químicos pesados em toda a área de uma vez.</button>
-                            <button onclick="decidir(15, 20)" class="bg-white hover:bg-emerald-600 hover:text-white p-2.5 rounded border border-gray-200 text-xs text-gray-700 transition-all font-medium">Mapear o foco com drones e aplicar manejo biológico localizado.</button>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section>
-                <h2 class="text-2xl font-bold text-gray-900 border-b-4 border-emerald-600 pb-2 mb-6 flex items-center gap-2">
-                    <i class="fa-solid fa-newspaper text-emerald-600"></i> Artigos e Novidades
-                </h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <article class="bg-white rounded-xl shadow-sm border border-gray-200 p-5 card-transicao">
-                        <span class="text-emerald-600 text-xs font-bold uppercase block mb-1">Tecnologia</span>
-                        <h3 class="font-bold text-lg text-gray-900 mb-2">⚡ Agricultura de Precisão</h3>
-                        <p class="text-gray-600 text-xs leading-relaxed">O uso inteligente de tecnologia ajudando o produtor do Paraná a economizar recursos naturais e insumos. Com sensores de solo e mapeamento aéreo computadorizado, fertilizantes e água são depositados apenas onde há real necessidade, reduzindo custos e as pegadas de poluição ambiental.</p>
-                    </article>
-                    <article class="bg-white rounded-xl shadow-sm border border-gray-200 p-5 card-transicao">
-                        <span class="text-emerald-600 text-xs font-bold uppercase block mb-1">Sustentabilidade</span>
-                        <h3 class="font-bold text-lg text-gray-900 mb-2">🌱 Sistema de Plantio Direto</h3>
-                        <p class="text-gray-600 text-xs leading-relaxed">Entenda os motivos que tornam o manejo e conservação do solo paranaense uma referência nacional. Ao semear diretamente sobre a palhada da colheita anterior, o produtor evita o desgaste da terra, reduz drasticamente a erosão e mantém a umidade natural por mais tempo.</p>
-                    </article>
-                </div>
-            </section>
-
-            <section>
-                <h2 class="text-2xl font-bold text-gray-900 border-b-4 border-emerald-600 pb-2 mb-6 flex items-center gap-2">
-                    <i class="fa-solid fa-lightbulb text-emerald-600"></i> Novidades do Campo Sustentável
-                </h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-200 card-transicao">
-                        <span class="bg-amber-100 text-amber-800 text-[10px] px-2 py-0.5 rounded font-bold uppercase block w-max mb-2">Inovação</span>
-                        <h3 class="text-base font-bold text-gray-800 mb-2">🚜 Maquinários a Biometano</h3>
-                        <p class="text-gray-600 text-xs leading-relaxed">Grandes tratores agrícolas deixam o óleo diesel poluente para trás e adotam o biometano. Esse gás limpo e renovável é gerado dentro da própria fazenda a partir do tratamento de dejetos animais e resíduos orgânicos.</p>
-                    </div>
-                    <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-200 card-transicao">
-                        <span class="bg-blue-100 text-blue-800 text-[10px] px-2 py-0.5 rounded font-bold uppercase block w-max mb-2">Integração</span>
-                        <h3 class="text-base font-bold text-gray-800 mb-2">🌳 Sistema ILPF no Paraná</h3>
-                        <p class="text-gray-600 text-xs leading-relaxed">A Integração Lavoura-Pecuária-Floresta combina grãos, gado e árvores nativas na mesma área. As árvores capturam o carbono do ar, criam barreiras de vento de proteção e oferecem conforto térmico e sombra para os animais.</p>
-                    </div>
-                </div>
-            </section>
-
-            <section>
-                <h2 class="text-2xl font-bold text-gray-900 border-b-4 border-emerald-600 pb-2 mb-6 flex items-center gap-2">
-                    <i class="fa-solid fa-images text-emerald-600"></i> Galeria Prática ODS
-                </h2>
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                    <div class="bg-gradient-to-br from-cyan-700 to-cyan-900 rounded-xl p-5 text-white shadow-md flex flex-col justify-between h-36 card-transicao">
-                        <i class="fa-solid fa-droplet text-3xl text-cyan-300"></i>
-                        <div>
-                            <h4 class="font-bold text-sm">Gotejamento Preciso</h4>
-                            <span class="text-[10px] text-cyan-200 block">ODS 6: Água Potável</span>
-                        </div>
-                    </div>
-                    <div class="bg-gradient-to-br from-amber-600 to-amber-800 rounded-xl p-5 text-white shadow-md flex flex-col justify-between h-36 card-transicao">
-                        <i class="fa-solid fa-solar-panel text-3xl text-amber-300"></i>
-                        <div>
-                            <h4 class="font-bold text-sm">Energia Fotovoltaica</h4>
-                            <span class="text-[10px] text-amber-100 block">ODS 7: Energia Limpa</span>
-                        </div>
-                    </div>
-                    <div class="bg-gradient-to-br from-emerald-700 to-emerald-900 rounded-xl p-5 text-white shadow-md flex flex-col justify-between h-36 card-transicao">
-                        <i class="fa-solid fa-tree text-3xl text-emerald-300"></i>
-                        <div>
-                            <h4 class="font-bold text-sm">Manejo de Solo Vivo</h4>
-                            <span class="text-[10px] text-emerald-200 block">ODS 15: Vida Terrestre</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-
-        <div class="space-y-12">
-            
-            <section>
-                <h2 class="text-2xl font-bold text-gray-900 border-b-4 border-emerald-600 pb-2 mb-6 flex items-center gap-2">
-                    <i class="fa-solid fa-video text-emerald-600"></i> Vídeos e Entrevistas
-                </h2>
-                <div class="bg-white rounded-xl shadow border border-gray-200 p-4">
-                    <h3 class="font-bold text-gray-800 text-xs mb-3 flex items-center gap-1">
-                        <i class="fa-solid fa-play text-red-600"></i> Entrevista: Sustentabilidade no Campo
-                    </h3>
-                    
-                    <div class="relative w-full aspect-video rounded-lg overflow-hidden bg-black shadow">
-                        <iframe 
-                            class="absolute top-0 left-0 w-full h-full" 
-                            src="https://www.youtube.com/embed/g87A_gY8wF0" 
-                            title="Vídeo Agro Sustentável"
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-                    <p class="text-[11px] text-gray-500 mt-3 leading-relaxed">Pesquisadores da Embrapa demonstram em campo prático como integrar sistemas sustentáveis de cultivo aumenta os lucros sem agredir o bioma local.</p>
-                </div>
-            </section>
-
-            <section class="bg-white p-5 rounded-xl shadow border border-gray-200">
-                <h3 class="text-sm font-bold text-gray-900 border-b-2 border-emerald-600 pb-2 mb-3 flex items-center gap-1">
-                    <i class="fa-solid fa-calculator text-emerald-600"></i> Calculadora de Impacto ODS
-                </h3>
-                <div class="space-y-3">
-                    <input type="number" id="num-ha" placeholder="Área da fazenda (Hectares)" class="w-full p-2 border border-gray-300 rounded text-xs focus:outline-emerald-600 font-bold">
-                    <button onclick="rodarCalculadora()" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2 rounded text-xs transition-colors">Simular Ganhos Ambientais</button>
-                    <div id="box-resultado-ods" class="text-[11px] text-gray-700 space-y-2 bg-gray-50 p-3 rounded hidden border border-gray-200">
-                        <p>💧 <strong>Água poupada:</strong> <span id="v-agua" class="text-blue-600 font-bold">0</span> litros/ano</p>
-                        <p>🌱 <strong>CO₂ sequestrado:</strong> <span id="v-carb" class="text-emerald-600 font-bold">0</span> kg</p>
-                    </div>
-                </div>
-            </section>
-
-            <section class="bg-white p-5 rounded-xl shadow border border-gray-200">
-                <h3 class="text-sm font-bold text-gray-900 border-b-2 border-emerald-600 pb-2 mb-3 flex items-center gap-1">
-                    <i class="fa-solid fa-square-check text-emerald-600"></i> Checklist Fazenda Nota 10
-                </h3>
-                <div class="space-y-2 text-xs text-gray-700">
-                    <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" class="box-chk" value="25"> Preserva matas ciliares e nascentes</label>
-                    <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" class="box-chk" value="25"> Aplica Plantio Direto rotativo</label>
-                    <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" class="box-chk" value="25"> Reaproveita biomassa para energia limpa</label>
-                    <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" class="box-chk" value="25"> Realiza descarte correto de embalagens</label>
-                </div>
-                <button onclick="verificarChecklist()" class="w-full mt-3 bg-emerald-700 hover:bg-emerald-800 text-white py-2 rounded text-xs font-bold transition-colors">Avaliar Fazenda</button>
-                <p id="msg-checklist" class="mt-2 text-[11px] font-bold text-center text-emerald-950 bg-emerald-50 p-2 rounded hidden border border-emerald-200"></p>
-            </section>
-        </div>
-    </main>
-
-    <footer class="bg-gray-900 text-gray-400 text-center py-6 text-xs border-t border-gray-800">
-        <p>&copy; 2026 - Agro Forte, Futuro Sustentável. Portal Educativo do Projeto Agrinho.</p>
-    </footer>
-
-    <script>
-        // Lógica do Quiz Seguro
-        function responderQuiz(sucesso) {
-            let f = document.getElementById("quiz-feedback-fixo");
-            if (!f) return;
-            f.classList.remove("hidden", "bg-red-100", "text-red-800", "bg-green-100", "text-green-800");
-            if(sucesso) {
-                f.innerText = "Parabéns! Resposta correta. A agricultura de precisão combate o desperdício aplicando recursos de forma cirúrgica.";
-                f.classList.add("bg-green-100", "text-green-800");
-            } else {
-                f.innerText = "Resposta incorreta! O foco sustentável busca sempre economia de insumos, biologia e equilíbrio nas plantações.";
-                f.classList.add("bg-red-100", "text-red-800");
-            }
-        }
-
-        // Lógica da Gamificação (Missão Equilíbrio)
-        let vlLucro = 50, vlNat = 50;
-        function decidir(p, a) {
-            vlLucro = Math.min(100, Math.max(10, vlLucro + p));
-            vlNat = Math.min(100, Math.max(10, vlNat + a));
-            
-            document.getElementById("txt-lucro").innerText = vlLucro + "%";
-            document.getElementById("txt-natureza").innerText = vlNat + "%";
-            
-            let c = document.getElementById("txt-cenario");
-            let btnBox = document.getElementById("container-botoes-sim");
-            
-            if(vlLucro >= 70 && vlNat >= 60) {
-                c.innerHTML = "<span class='text-green-600 font-bold'>Parabéns!</span> Você alcançou o equilíbrio ideal de gestão!";
-                btnBox.innerHTML = `<button onclick="window.location.reload()" class='w-full bg-emerald-700 text-white p-2.5 rounded text-xs font-bold'>Reiniciar Jogo</button>`;
-            } else {
-                c.innerText = "Próximo desafio: Período de seca severa atingiu o Paraná. Como economizar água na irrigação?";
-                btnBox.innerHTML = `
-                    <button onclick="decidir(10, -20)" class="bg-white hover:bg-amber-600 hover:text-white p-2.5 rounded border border-gray-200 text-xs text-gray-700 transition-all font-medium">Ligar as bombas de irrigação normais 24 horas por dia.</button>
-                    <button onclick="decidir(20, 30)" class="bg-white hover:bg-emerald-600 hover:text-white p-2.5 rounded border border-gray-200 text-xs text-gray-700 transition-all font-medium">Instalar sensores de umidade do solo e gotejamento computadorizado.</button>
-                `;
-            }
-        }
-
-        // Lógica da Calculadora ODS
-        function rodarCalculadora() {
-            let h = parseFloat(document.getElementById("num-ha").value);
-            if(isNaN(h) || h <= 0) return;
-            document.getElementById("box-resultado-ods").classList.remove("hidden");
-            document.getElementById("v-agua").innerText = (h * 12500).toLocaleString('pt-BR');
-            document.getElementById("v-carb").innerText = (h * 380).toLocaleString('pt-BR');
-        }
-
-        // Lógica do Checklist Fazenda Nota 10
-        function verificarChecklist() {
-            let nota = 0;
-            document.querySelectorAll(".box-chk").forEach(b => { if(b.checked) nota += parseInt(b.value); });
-            let msg = document.getElementById("msg-checklist");
-            msg.classList.remove("hidden");
-            msg.innerText = nota === 100 ? "Nota 10! Propriedade modelo em sustentabilidade! 🥇" : `Nota da fazenda: ${nota/10}. Continue implementando melhorias!`;
-        }
-    </script>
-</body>
-</html>
+                    <div id="icon-maringa"><i class="fa-solid fa-circle-notch fa-spin text-emerald-600 text-2xl my-2"></i></div>
+                    <span id="temp-maringa" class="text-xl font-black text-gray-900">--°C</span>
+                    <span id="ur-maringa" class="text-[10px] text-emerald-700 font-semibold bg-emerald-1
