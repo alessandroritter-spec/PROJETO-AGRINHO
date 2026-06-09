@@ -1,79 +1,98 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Agro Forte: Futuro Sustentável - equilíbrio entre produção e meio ambiente.">
-    <meta name="keywords" content="agrinho, agro, sustentabilidade, agricultura, meio ambiente">
-    <meta name="author" content="Estudante Concurso Agrinho 2026">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Agro forte, futuro sustentável: equilíbrio entre produção e meio ambiente.">
+
+    <meta name="keywords"
+          content="agrinho, agro, sustentabilidade, agricultura, meio ambiente">
+
+    <meta name="author"
+          content="Estudante Concurso Agrinho 2026">
 
     <title>Agro Forte: Futuro Sustentável</title>
 
-    <!-- CSS EXTERNO -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- Ícones -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Fonte Google -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- Evita erro de favicon -->
+    <link rel="icon" href="data:,">
 </head>
 
 <body>
 
     <!-- CABEÇALHO -->
-    <header class="header">
+
+    <header class="cabecalho">
 
         <div class="logo">
-            <h1>🌱 Agro Forte</h1>
-            <span>Futuro Sustentável</span>
+
+            <span class="icone-logo">🌱</span>
+
+            <div>
+                <h1>Agro Forte</h1>
+                <p>Futuro Sustentável</p>
+            </div>
+
         </div>
 
-        <nav class="menu">
+        <nav>
 
-            <ul class="menu-lista">
+            <ul class="menu">
 
-                <li>
-                    <a href="#inicio">Início</a>
-                </li>
+                <li><a href="#inicio">Início</a></li>
 
-                <li>
-                    <a href="#agricultura">Agricultura Inteligente</a>
-                </li>
+                <li><a href="#agricultura">Agricultura Inteligente</a></li>
 
-                <li>
-                    <a href="#equilibrio">Equilíbrio Ambiental</a>
-                </li>
+                <li><a href="#equilibrio">Equilíbrio Ambiental</a></li>
 
-                <li>
-                    <a href="#simulador">Simulador</a>
-                </li>
+                <li><a href="#simulador">Simulador</a></li>
 
-                <li>
-                    <a href="#quiz">Quiz</a>
-                </li>
+                <li><a href="#quiz">Quiz</a></li>
 
-                <li>
-                    <a href="#calculadora">Calculadora</a>
-                </li>
+                <li><a href="#calculadora">Calculadora</a></li>
 
-                <li>
-                    <a href="#creditos">Créditos</a>
-                </li>
+                <li><a href="#creditos">Créditos</a></li>
 
             </ul>
 
         </nav>
 
-        <button id="modoEscuro" class="btn-dark">
+        <button id="modoEscuro"
+                class="btn-modo">
+
             🌙 Modo Escuro
+
         </button>
 
     </header>
 
-    <!-- HERO -->
-    <section id="inicio" class="hero">
+    <!-- BANNER -->
+
+    <section class="hero"
+             id="inicio">
 
         <div class="hero-conteudo">
+
+            <span class="selo">
+                Concurso Agrinho 2026
+            </span>
 
             <h2>
                 Agro forte, futuro sustentável:
@@ -81,13 +100,35 @@
             </h2>
 
             <p>
-                Produzir alimentos com responsabilidade é garantir qualidade de vida,
-                preservação dos recursos naturais e segurança alimentar para as futuras gerações.
+
+                Produzir alimentos com responsabilidade é garantir qualidade
+                de vida, preservação dos recursos naturais e segurança
+                alimentar para as futuras gerações.
+
             </p>
 
-            <button class="btn-principal" id="explorar">
-                Explorar Soluções Sustentáveis
-            </button>
+            <div class="hero-botoes">
+
+                <a href="#agricultura"
+                   class="btn-principal">
+
+                    Explorar Soluções Sustentáveis
+
+                </a>
+
+                <a href="#simulador"
+                   class="btn-secundario">
+
+                    Participar das Atividades
+
+                </a>
+
+            </div>
+
+            <div id="fraseDinamica"
+                 class="frase-dinamica">
+
+            </div>
 
         </div>
 
@@ -95,100 +136,121 @@
 
     <main>
 
-        <!-- FRASE DINÂMICA -->
-        <section class="frase-container">
-
-            <h2>Mensagem do Dia</h2>
-
-            <p id="fraseDinamica">
-                Carregando mensagem...
-            </p>
-
-        </section>
-
         <!-- AGRICULTURA INTELIGENTE -->
-        <section id="agricultura" class="secao">
+
+        <section class="secao"
+                 id="agricultura">
 
             <div class="titulo-secao">
 
-                <h2>🚜 Agricultura Inteligente</h2>
+                <h2>🌾 Agricultura Inteligente</h2>
 
                 <p>
-                    A tecnologia auxilia os produtores rurais a produzir mais,
-                    reduzindo desperdícios e impactos ambientais.
+
+                    A tecnologia pode aumentar a produtividade
+                    e reduzir impactos ambientais.
+
                 </p>
 
             </div>
 
             <div class="cards">
 
+                <!-- CARD 1 -->
+
                 <article class="card">
 
-                    <h3>🚁 Drones no Campo</h3>
+                    <img src="assets/img/agricultura-inteligente.jpg"
+                         alt="Tecnologia aplicada ao campo">
+
+                    <h3>Drones no Campo</h3>
 
                     <p>
-                        Monitoramento das lavouras com precisão.
+
+                        Monitoram plantações,
+                        identificam falhas e auxiliam na tomada de decisões.
+
                     </p>
 
                     <button class="btn-card"
                             onclick="mostrarInfo('infoDrone')">
+
                         Saiba Mais
+
                     </button>
 
-                    <div class="info-extra" id="infoDrone">
+                    <div class="info-extra"
+                         id="infoDrone">
 
-                        <p>
-                            Os drones identificam pragas, falhas no plantio
-                            e ajudam na aplicação mais eficiente de insumos.
-                        </p>
+                        Os drones permitem identificar áreas com deficiência
+                        hídrica, pragas e necessidades específicas,
+                        reduzindo desperdícios.
 
                     </div>
 
                 </article>
 
+                <!-- CARD 2 -->
+
                 <article class="card">
 
-                    <h3>💧 Irrigação Inteligente</h3>
+                    <img src="assets/img/sustentabilidade.jpg"
+                         alt="Uso consciente da água">
+
+                    <h3>Irrigação Inteligente</h3>
 
                     <p>
-                        Uso racional dos recursos hídricos.
+
+                        Sensores ajudam a utilizar somente a quantidade
+                        necessária de água.
+
                     </p>
 
                     <button class="btn-card"
-                            onclick="mostrarInfo('infoIrrigacao')">
+                            onclick="mostrarInfo('infoAgua')">
+
                         Saiba Mais
+
                     </button>
 
-                    <div class="info-extra" id="infoIrrigacao">
+                    <div class="info-extra"
+                         id="infoAgua">
 
-                        <p>
-                            Sensores monitoram a umidade do solo,
-                            evitando desperdícios de água.
-                        </p>
+                        O controle eficiente da irrigação preserva recursos
+                        hídricos e reduz custos de produção.
 
                     </div>
 
                 </article>
 
+                <!-- CARD 3 -->
+
                 <article class="card">
 
-                    <h3>📡 Sensores Agrícolas</h3>
+                    <img src="assets/img/equilibrio-ambiental.jpg"
+                         alt="Preservação ambiental">
+
+                    <h3>Proteção Ambiental</h3>
 
                     <p>
-                        Dados em tempo real para melhores decisões.
+
+                        Produzir respeitando a biodiversidade fortalece
+                        o equilíbrio ecológico.
+
                     </p>
 
                     <button class="btn-card"
-                            onclick="mostrarInfo('infoSensores')">
+                            onclick="mostrarInfo('infoAmbiente')">
+
                         Saiba Mais
+
                     </button>
 
-                    <div class="info-extra" id="infoSensores">
+                    <div class="info-extra"
+                         id="infoAmbiente">
 
-                        <p>
-                            Temperatura, nutrientes e condições climáticas
-                            podem ser acompanhadas continuamente.
-                        </p>
+                        A preservação das matas ciliares e o uso responsável
+                        do solo contribuem para a sustentabilidade.
 
                     </div>
 
@@ -199,342 +261,47 @@
         </section>
 
         <!-- EQUILÍBRIO AMBIENTAL -->
-        <section id="equilibrio" class="secao destaque">
+
+        <section class="secao destaque"
+                 id="equilibrio">
 
             <div class="titulo-secao">
 
-                <h2>🌳 Equilíbrio Ambiental</h2>
-
-                <p>
-                    Produzir respeitando a natureza é essencial para a sustentabilidade.
-                </p>
+                <h2>🌎 Produção e Meio Ambiente</h2>
 
             </div>
 
-            <div class="cards">
+            <div class="conteudo-equilibrio">
 
-                <article class="card">
-
-                    <h3>🌱 Recuperação do Solo</h3>
+                <div>
 
                     <p>
-                        Conservação da fertilidade e redução da erosão.
+
+                        O agronegócio é essencial para alimentar a população,
+                        gerar empregos e movimentar a economia.
+
                     </p>
-
-                </article>
-
-                <article class="card">
-
-                    <h3>💙 Preservação das Nascentes</h3>
 
                     <p>
-                        Garantia de água para as próximas gerações.
+
+                        Ao mesmo tempo, a preservação dos recursos naturais
+                        garante água, fertilidade do solo e biodiversidade.
+
                     </p>
-
-                </article>
-
-                <article class="card">
-
-                    <h3>🦋 Biodiversidade</h3>
 
                     <p>
-                        Proteção das espécies e equilíbrio ecológico.
+
+                        O desafio das novas gerações é unir tecnologia,
+                        responsabilidade e inovação para produzir mais,
+                        preservando o planeta.
+
                     </p>
 
-                </article>
+                </div>
+
+                <img src="assets/img/banner.jpg"
+                     alt="Campo sustentável">
 
             </div>
 
         </section>
-        <!-- SIMULADOR DO PRODUTOR SUSTENTÁVEL -->
-        <section id="simulador" class="secao">
-
-            <div class="titulo-secao">
-
-                <h2>🌾 Simulador do Produtor Sustentável</h2>
-
-                <p>
-                    Faça escolhas e descubra qual é o seu perfil de sustentabilidade.
-                </p>
-
-            </div>
-
-            <div class="simulador-container">
-
-                <div class="pergunta">
-
-                    <h3>1. Como você irrigaria sua plantação?</h3>
-
-                    <button class="btn-opcao"
-                            onclick="responderSimulador('agua', 10)">
-                        Irrigação por gotejamento
-                    </button>
-
-                    <button class="btn-opcao"
-                            onclick="responderSimulador('agua', 5)">
-                        Irrigação convencional
-                    </button>
-
-                </div>
-
-                <div class="pergunta">
-
-                    <h3>2. Qual fonte de energia utilizaria?</h3>
-
-                    <button class="btn-opcao"
-                            onclick="responderSimulador('energia', 10)">
-                        Energia solar
-                    </button>
-
-                    <button class="btn-opcao"
-                            onclick="responderSimulador('energia', 5)">
-                        Energia tradicional
-                    </button>
-
-                </div>
-
-                <div class="pergunta">
-
-                    <h3>3. Como cuidaria do solo?</h3>
-
-                    <button class="btn-opcao"
-                            onclick="responderSimulador('solo', 10)">
-                        Rotação de culturas
-                    </button>
-
-                    <button class="btn-opcao"
-                            onclick="responderSimulador('solo', 5)">
-                        Manejo convencional
-                    </button>
-
-                </div>
-
-                <button id="resultadoSimulador"
-                        class="btn-principal">
-                    Ver Resultado
-                </button>
-
-                <div id="perfilSustentavel" class="resultado-box">
-
-                </div>
-
-            </div>
-
-        </section>
-
-        <!-- QUIZ -->
-        <section id="quiz" class="secao destaque">
-
-            <div class="titulo-secao">
-
-                <h2>🧠 Quiz Agrinho</h2>
-
-                <p>
-                    Teste seus conhecimentos sobre sustentabilidade no campo.
-                </p>
-
-            </div>
-
-            <div class="quiz-container">
-
-                <div class="quiz-pergunta">
-
-                    <h3>
-                        Qual prática ajuda a economizar água?
-                    </h3>
-
-                    <button onclick="responderQuiz(this,true)">
-                        Irrigação por gotejamento
-                    </button>
-
-                    <button onclick="responderQuiz(this,false)">
-                        Desperdício de água
-                    </button>
-
-                </div>
-
-                <div class="quiz-pergunta">
-
-                    <h3>
-                        O que ajuda na preservação do solo?
-                    </h3>
-
-                    <button onclick="responderQuiz(this,true)">
-                        Rotação de culturas
-                    </button>
-
-                    <button onclick="responderQuiz(this,false)">
-                        Queimadas frequentes
-                    </button>
-
-                </div>
-
-                <div class="quiz-pergunta">
-
-                    <h3>
-                        Qual tecnologia auxilia o monitoramento agrícola?
-                    </h3>
-
-                    <button onclick="responderQuiz(this,true)">
-                        Drones
-                    </button>
-
-                    <button onclick="responderQuiz(this,false)">
-                        Poluição
-                    </button>
-
-                </div>
-
-                <button id="finalizarQuiz"
-                        class="btn-principal">
-                    Finalizar Quiz
-                </button>
-
-                <div id="resultadoQuiz"
-                     class="resultado-box">
-
-                </div>
-
-            </div>
-
-        </section>
-
-        <!-- CALCULADORA -->
-        <section id="calculadora" class="secao">
-
-            <div class="titulo-secao">
-
-                <h2>📊 Calculadora de Sustentabilidade</h2>
-
-                <p>
-                    Descubra seu nível de contribuição para um futuro sustentável.
-                </p>
-
-            </div>
-
-            <div class="calculadora-container">
-
-                <label>
-
-                    <input type="checkbox" id="solar">
-
-                    Utiliza energia renovável.
-
-                </label>
-
-                <label>
-
-                    <input type="checkbox" id="reuso">
-
-                    Reaproveita água.
-
-                </label>
-
-                <label>
-
-                    <input type="checkbox" id="rotacao">
-
-                    Faz rotação de culturas.
-
-                </label>
-
-                <label>
-
-                    <input type="checkbox" id="preservacao">
-
-                    Preserva áreas naturais.
-
-                </label>
-
-                <button id="calcularPegada"
-                        class="btn-principal">
-
-                    Calcular
-
-                </button>
-
-                <div id="resultadoPegada"
-                     class="resultado-box">
-
-                </div>
-
-            </div>
-
-        </section>
-
-        <!-- GALERIA -->
-        <section class="secao destaque">
-
-            <div class="titulo-secao">
-
-                <h2>📸 Galeria do Futuro Sustentável</h2>
-
-                <p>
-                    Exemplos de práticas que unem tecnologia e preservação.
-                </p>
-
-            </div>
-
-            <div class="galeria">
-
-                <img src="https://chatgpt.com/backend-api/estuary/content?id=file_000000007394720e9df66643a9874912&ts=494734&p=fs&cid=1&sig=34dd36b7dbf6802d022982185ec7767e963557167d7a9541576b927bbbd500a1&v=0"
-                     alt="Agricultura sustentável">
-
-                <img src="assets/img/agricultura2.jpg"
-                     alt="Tecnologia no campo">
-
-                <img src="assets/img/agricultura3.jpg"
-                     alt="Preservação ambiental">
-
-            </div>
-
-        </section>
-
-        <!-- CRÉDITOS -->
-        <section id="creditos" class="secao">
-
-            <div class="titulo-secao">
-
-                <h2>📚 Créditos e Autoria</h2>
-
-            </div>
-
-            <p>
-                Este projeto foi desenvolvido para o Concurso Agrinho 2026,
-                com o objetivo de conscientizar sobre a importância do equilíbrio
-                entre produção agrícola e preservação ambiental.
-            </p>
-
-            <p>
-                Logotipo e identidade visual podem ser produzidos pelo estudante
-                utilizando ferramentas como Canva ou Paint.
-            </p>
-
-            <p>
-                Caso sejam utilizados recursos externos ou gerados por IA,
-                os créditos e prompts deverão constar no README.md,
-                conforme exigência do regulamento.
-            </p>
-
-        </section>
-
-    </main>
-
-    <!-- RODAPÉ -->
-    <footer class="footer">
-
-        <p>
-            © 2026 - Projeto desenvolvido para o Concurso Agrinho.
-        </p>
-
-        <p>
-            Tema: Agro forte, futuro sustentável: equilíbrio entre produção e meio ambiente.
-        </p>
-
-    </footer>
-
-    <!-- JAVASCRIPT EXTERNO -->
-    <script src="script.js"></script>
-
-</body>
-</html>
