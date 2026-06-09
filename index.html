@@ -1,100 +1,248 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Agro Forte: Futuro Sustentável - equilíbrio entre produção e meio ambiente.">
+    <meta name="keywords" content="agrinho, agro, sustentabilidade, agricultura, meio ambiente">
+    <meta name="author" content="Estudante Concurso Agrinho 2026">
 
-    <title>Agro Forte - Futuro Sustentável</title>
+    <title>Agro Forte: Futuro Sustentável</title>
 
+    <!-- CSS EXTERNO -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Ícones -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
 
-    <style>
-        /* =========================
-           RESET
-        ========================= */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
+<body>
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: #f4fff4;
-            color: #222;
-            overflow-x: hidden;
-        }
+    <!-- CABEÇALHO -->
+    <header class="header">
 
-        /* =========================
-           HEADER
-        ========================= */
-        header {
-            width: 100%;
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 1000;
-            padding: 20px 8%;
-            background: linear-gradient(135deg, #0a5f2c, #1f8f3c, #52b788);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
+        <div class="logo">
+            <h1>🌱 Agro Forte</h1>
+            <span>Futuro Sustentável</span>
+        </div>
 
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+        <nav class="menu">
 
-        .logo {
-            color: white;
-            font-size: 2rem;
-            font-weight: 700;
-        }
+            <ul class="menu-lista">
 
-        .logo span {
-            color: #d8ff9d;
-        }
+                <li>
+                    <a href="#inicio">Início</a>
+                </li>
 
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 25px;
-        }
+                <li>
+                    <a href="#agricultura">Agricultura Inteligente</a>
+                </li>
 
-        nav ul li a {
-            text-decoration: none;
-            color: white;
-            font-weight: 500;
-            transition: 0.3s;
-        }
+                <li>
+                    <a href="#equilibrio">Equilíbrio Ambiental</a>
+                </li>
 
-        nav ul li a:hover {
-            color: #d8ff9d;
-        }
+                <li>
+                    <a href="#simulador">Simulador</a>
+                </li>
 
-        /* =========================
-           HERO
-        ========================= */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: white;
-            padding: 120px 20px 50px;
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1600&auto=format&fit=crop');
-            background-size: cover;
-            background-position: center;
-        }
+                <li>
+                    <a href="#quiz">Quiz</a>
+                </li>
 
-        .hero-content h1 {
-            font-size: 4rem;
-            margin-bottom: 20px;
-        }
+                <li>
+                    <a href="#calculadora">Calculadora</a>
+                </li>
 
-        .hero-content p
+                <li>
+                    <a href="#creditos">Créditos</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+        <button id="modoEscuro" class="btn-dark">
+            🌙 Modo Escuro
+        </button>
+
+    </header>
+
+    <!-- HERO -->
+    <section id="inicio" class="hero">
+
+        <div class="hero-conteudo">
+
+            <h2>
+                Agro forte, futuro sustentável:
+                equilíbrio entre produção e meio ambiente
+            </h2>
+
+            <p>
+                Produzir alimentos com responsabilidade é garantir qualidade de vida,
+                preservação dos recursos naturais e segurança alimentar para as futuras gerações.
+            </p>
+
+            <button class="btn-principal" id="explorar">
+                Explorar Soluções Sustentáveis
+            </button>
+
+        </div>
+
+    </section>
+
+    <main>
+
+        <!-- FRASE DINÂMICA -->
+        <section class="frase-container">
+
+            <h2>Mensagem do Dia</h2>
+
+            <p id="fraseDinamica">
+                Carregando mensagem...
+            </p>
+
+        </section>
+
+        <!-- AGRICULTURA INTELIGENTE -->
+        <section id="agricultura" class="secao">
+
+            <div class="titulo-secao">
+
+                <h2>🚜 Agricultura Inteligente</h2>
+
+                <p>
+                    A tecnologia auxilia os produtores rurais a produzir mais,
+                    reduzindo desperdícios e impactos ambientais.
+                </p>
+
+            </div>
+
+            <div class="cards">
+
+                <article class="card">
+
+                    <h3>🚁 Drones no Campo</h3>
+
+                    <p>
+                        Monitoramento das lavouras com precisão.
+                    </p>
+
+                    <button class="btn-card"
+                            onclick="mostrarInfo('infoDrone')">
+                        Saiba Mais
+                    </button>
+
+                    <div class="info-extra" id="infoDrone">
+
+                        <p>
+                            Os drones identificam pragas, falhas no plantio
+                            e ajudam na aplicação mais eficiente de insumos.
+                        </p>
+
+                    </div>
+
+                </article>
+
+                <article class="card">
+
+                    <h3>💧 Irrigação Inteligente</h3>
+
+                    <p>
+                        Uso racional dos recursos hídricos.
+                    </p>
+
+                    <button class="btn-card"
+                            onclick="mostrarInfo('infoIrrigacao')">
+                        Saiba Mais
+                    </button>
+
+                    <div class="info-extra" id="infoIrrigacao">
+
+                        <p>
+                            Sensores monitoram a umidade do solo,
+                            evitando desperdícios de água.
+                        </p>
+
+                    </div>
+
+                </article>
+
+                <article class="card">
+
+                    <h3>📡 Sensores Agrícolas</h3>
+
+                    <p>
+                        Dados em tempo real para melhores decisões.
+                    </p>
+
+                    <button class="btn-card"
+                            onclick="mostrarInfo('infoSensores')">
+                        Saiba Mais
+                    </button>
+
+                    <div class="info-extra" id="infoSensores">
+
+                        <p>
+                            Temperatura, nutrientes e condições climáticas
+                            podem ser acompanhadas continuamente.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- EQUILÍBRIO AMBIENTAL -->
+        <section id="equilibrio" class="secao destaque">
+
+            <div class="titulo-secao">
+
+                <h2>🌳 Equilíbrio Ambiental</h2>
+
+                <p>
+                    Produzir respeitando a natureza é essencial para a sustentabilidade.
+                </p>
+
+            </div>
+
+            <div class="cards">
+
+                <article class="card">
+
+                    <h3>🌱 Recuperação do Solo</h3>
+
+                    <p>
+                        Conservação da fertilidade e redução da erosão.
+                    </p>
+
+                </article>
+
+                <article class="card">
+
+                    <h3>💙 Preservação das Nascentes</h3>
+
+                    <p>
+                        Garantia de água para as próximas gerações.
+                    </p>
+
+                </article>
+
+                <article class="card">
+
+                    <h3>🦋 Biodiversidade</h3>
+
+                    <p>
+                        Proteção das espécies e equilíbrio ecológico.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
