@@ -343,6 +343,285 @@ img{
     border-left: 5px solid var(--cor-secundaria);
 
     background-color: #eef7ee;
+/* ==========================================
+   SIMULADOR DO PRODUTOR SUSTENTÁVEL
+========================================== */
 
+.simulador-container{
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 30px;
+}
+
+.pergunta{
+    background-color: var(--cor-branca);
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    box-shadow: var(--sombra);
+}
+
+.pergunta h3{
+    color: var(--cor-principal);
+
+    margin-bottom: 20px;
+
+    font-size: 1.2rem;
+}
+
+.btn-opcao{
+    background-color: var(--cor-secundaria);
+
+    color: var(--cor-branca);
+
+    border: none;
+
+    padding: 12px 20px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    margin: 8px;
+
+    font-weight: 600;
+
+    transition: var(--transicao);
+}
+
+.btn-opcao:hover{
+    transform: translateY(-3px);
+
+    background-color: var(--cor-principal);
+}
+
+/* ==========================================
+   RESULTADOS
+========================================== */
+
+.resultado-box{
+    display: none;
+
+    margin-top: 25px;
+
+    padding: 25px;
+
+    background-color: #eef7ee;
+
+    border-left: 6px solid var(--cor-principal);
+
+    border-radius: 10px;
+
+    font-size: 1.1rem;
+
+    font-weight: 600;
+}
+
+/* ==========================================
+   QUIZ
+========================================== */
+
+.quiz-container{
+    max-width: 900px;
+
+    margin: 0 auto;
+}
+
+.quiz-pergunta{
+    background-color: var(--cor-branca);
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    margin-bottom: 25px;
+
+    box-shadow: var(--sombra);
+}
+
+.quiz-pergunta h3{
+    margin-bottom: 20px;
+
+    color: var(--cor-principal);
+}
+
+.quiz-pergunta button{
+    display: block;
+
+    width: 100%;
+
+    margin: 12px 0;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background-color: #e8f5e9;
+
+    cursor: pointer;
+
+    font-size: 1rem;
+
+    transition: var(--transicao);
+}
+
+.quiz-pergunta button:hover{
+    background-color: var(--cor-secundaria);
+
+    color: var(--cor-branca);
+}
+
+/* RESPOSTAS DO QUIZ */
+
+.resposta-correta{
+    background-color: #4caf50 !important;
+
+    color: #ffffff;
+}
+
+.resposta-incorreta{
+    background-color: #e53935 !important;
+
+    color: #ffffff;
+}
+
+/* ==========================================
+   CALCULADORA DE SUSTENTABILIDADE
+========================================== */
+
+.calculadora-container{
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+.calculadora-container label{
+    background-color: var(--cor-branca);
+
+    padding: 18px 20px;
+
+    border-radius: 10px;
+
+    box-shadow: var(--sombra);
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    cursor: pointer;
+
+    transition: var(--transicao);
+}
+
+.calculadora-container label:hover{
+    transform: translateX(5px);
+}
+
+.calculadora-container input[type="checkbox"]{
+    width: 20px;
+    height: 20px;
+
+    cursor: pointer;
+}
+
+/* ==========================================
+   GALERIA
+========================================== */
+
+.galeria{
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 25px;
+}
+
+.galeria img{
+    width: 100%;
+
+    height: 250px;
+
+    object-fit: cover;
+
+    border-radius: 15px;
+
+    box-shadow: var(--sombra);
+
+    transition: var(--transicao);
+}
+
+.galeria img:hover{
+    transform: scale(1.03);
+}
+
+/* ==========================================
+   CRÉDITOS
+========================================== */
+
+#creditos p{
+    max-width: 900px;
+
+    margin: 15px auto;
+
+    text-align: center;
+
+    font-size: 1.05rem;
+}
+
+/* ==========================================
+   RODAPÉ
+========================================== */
+
+.footer{
+    background-color: var(--cor-footer);
+
+    color: var(--cor-branca);
+
+    text-align: center;
+
+    padding: 40px 20px;
+}
+
+.footer p{
+    margin: 10px 0;
+}
+
+/* ==========================================
+   ANIMAÇÕES
+========================================== */
+
+@keyframes aparecer{
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card,
+.pergunta,
+.quiz-pergunta,
+.resultado-box,
+.galeria img{
+    animation: aparecer 0.8s ease;
+}
     border-radius: 8px;
 }
