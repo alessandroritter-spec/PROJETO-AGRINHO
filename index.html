@@ -246,3 +246,295 @@
             </div>
 
         </section>
+        <!-- SIMULADOR DO PRODUTOR SUSTENTÁVEL -->
+        <section id="simulador" class="secao">
+
+            <div class="titulo-secao">
+
+                <h2>🌾 Simulador do Produtor Sustentável</h2>
+
+                <p>
+                    Faça escolhas e descubra qual é o seu perfil de sustentabilidade.
+                </p>
+
+            </div>
+
+            <div class="simulador-container">
+
+                <div class="pergunta">
+
+                    <h3>1. Como você irrigaria sua plantação?</h3>
+
+                    <button class="btn-opcao"
+                            onclick="responderSimulador('agua', 10)">
+                        Irrigação por gotejamento
+                    </button>
+
+                    <button class="btn-opcao"
+                            onclick="responderSimulador('agua', 5)">
+                        Irrigação convencional
+                    </button>
+
+                </div>
+
+                <div class="pergunta">
+
+                    <h3>2. Qual fonte de energia utilizaria?</h3>
+
+                    <button class="btn-opcao"
+                            onclick="responderSimulador('energia', 10)">
+                        Energia solar
+                    </button>
+
+                    <button class="btn-opcao"
+                            onclick="responderSimulador('energia', 5)">
+                        Energia tradicional
+                    </button>
+
+                </div>
+
+                <div class="pergunta">
+
+                    <h3>3. Como cuidaria do solo?</h3>
+
+                    <button class="btn-opcao"
+                            onclick="responderSimulador('solo', 10)">
+                        Rotação de culturas
+                    </button>
+
+                    <button class="btn-opcao"
+                            onclick="responderSimulador('solo', 5)">
+                        Manejo convencional
+                    </button>
+
+                </div>
+
+                <button id="resultadoSimulador"
+                        class="btn-principal">
+                    Ver Resultado
+                </button>
+
+                <div id="perfilSustentavel" class="resultado-box">
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- QUIZ -->
+        <section id="quiz" class="secao destaque">
+
+            <div class="titulo-secao">
+
+                <h2>🧠 Quiz Agrinho</h2>
+
+                <p>
+                    Teste seus conhecimentos sobre sustentabilidade no campo.
+                </p>
+
+            </div>
+
+            <div class="quiz-container">
+
+                <div class="quiz-pergunta">
+
+                    <h3>
+                        Qual prática ajuda a economizar água?
+                    </h3>
+
+                    <button onclick="responderQuiz(this,true)">
+                        Irrigação por gotejamento
+                    </button>
+
+                    <button onclick="responderQuiz(this,false)">
+                        Desperdício de água
+                    </button>
+
+                </div>
+
+                <div class="quiz-pergunta">
+
+                    <h3>
+                        O que ajuda na preservação do solo?
+                    </h3>
+
+                    <button onclick="responderQuiz(this,true)">
+                        Rotação de culturas
+                    </button>
+
+                    <button onclick="responderQuiz(this,false)">
+                        Queimadas frequentes
+                    </button>
+
+                </div>
+
+                <div class="quiz-pergunta">
+
+                    <h3>
+                        Qual tecnologia auxilia o monitoramento agrícola?
+                    </h3>
+
+                    <button onclick="responderQuiz(this,true)">
+                        Drones
+                    </button>
+
+                    <button onclick="responderQuiz(this,false)">
+                        Poluição
+                    </button>
+
+                </div>
+
+                <button id="finalizarQuiz"
+                        class="btn-principal">
+                    Finalizar Quiz
+                </button>
+
+                <div id="resultadoQuiz"
+                     class="resultado-box">
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- CALCULADORA -->
+        <section id="calculadora" class="secao">
+
+            <div class="titulo-secao">
+
+                <h2>📊 Calculadora de Sustentabilidade</h2>
+
+                <p>
+                    Descubra seu nível de contribuição para um futuro sustentável.
+                </p>
+
+            </div>
+
+            <div class="calculadora-container">
+
+                <label>
+
+                    <input type="checkbox" id="solar">
+
+                    Utiliza energia renovável.
+
+                </label>
+
+                <label>
+
+                    <input type="checkbox" id="reuso">
+
+                    Reaproveita água.
+
+                </label>
+
+                <label>
+
+                    <input type="checkbox" id="rotacao">
+
+                    Faz rotação de culturas.
+
+                </label>
+
+                <label>
+
+                    <input type="checkbox" id="preservacao">
+
+                    Preserva áreas naturais.
+
+                </label>
+
+                <button id="calcularPegada"
+                        class="btn-principal">
+
+                    Calcular
+
+                </button>
+
+                <div id="resultadoPegada"
+                     class="resultado-box">
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- GALERIA -->
+        <section class="secao destaque">
+
+            <div class="titulo-secao">
+
+                <h2>📸 Galeria do Futuro Sustentável</h2>
+
+                <p>
+                    Exemplos de práticas que unem tecnologia e preservação.
+                </p>
+
+            </div>
+
+            <div class="galeria">
+
+                <img src="assets/img/agricultura1.jpg"
+                     alt="Agricultura sustentável">
+
+                <img src="assets/img/agricultura2.jpg"
+                     alt="Tecnologia no campo">
+
+                <img src="assets/img/agricultura3.jpg"
+                     alt="Preservação ambiental">
+
+            </div>
+
+        </section>
+
+        <!-- CRÉDITOS -->
+        <section id="creditos" class="secao">
+
+            <div class="titulo-secao">
+
+                <h2>📚 Créditos e Autoria</h2>
+
+            </div>
+
+            <p>
+                Este projeto foi desenvolvido para o Concurso Agrinho 2026,
+                com o objetivo de conscientizar sobre a importância do equilíbrio
+                entre produção agrícola e preservação ambiental.
+            </p>
+
+            <p>
+                Logotipo e identidade visual podem ser produzidos pelo estudante
+                utilizando ferramentas como Canva ou Paint.
+            </p>
+
+            <p>
+                Caso sejam utilizados recursos externos ou gerados por IA,
+                os créditos e prompts deverão constar no README.md,
+                conforme exigência do regulamento.
+            </p>
+
+        </section>
+
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="footer">
+
+        <p>
+            © 2026 - Projeto desenvolvido para o Concurso Agrinho.
+        </p>
+
+        <p>
+            Tema: Agro forte, futuro sustentável: equilíbrio entre produção e meio ambiente.
+        </p>
+
+    </footer>
+
+    <!-- JAVASCRIPT EXTERNO -->
+    <script src="script.js"></script>
+
+</body>
+</html>
