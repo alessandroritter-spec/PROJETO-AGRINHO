@@ -116,52 +116,49 @@ const botaoResultado = document.getElementById("resultadoSimulador");
 
 if(botaoResultado){
 
-    botaoResultado.addEventListener("click", () => {
+   document.addEventListener("DOMContentLoaded", () => {
 
-        const total =
-            respostasSimulador.agua +
-            respostasSimulador.energia +
-            respostasSimulador.solo;
+    const botaoResultado = document.getElementById("resultadoSimulador");
 
-        const resultado =
-            document.getElementById("perfilSustentavel");
+    if (botaoResultado) {
+        botaoResultado.addEventListener("click", mostrarResultadoSimulador);
+    }
 
-        resultado.style.display = "block";
+});
 
-        if(total >= 25){
+function mostrarResultadoSimulador() {
 
-            resultado.innerHTML = `
-                <h3>🌎 Produtor Inovador</h3>
-                <p>
-                    Você demonstra forte compromisso com a sustentabilidade
-                    e utiliza práticas modernas para preservar os recursos naturais.
-                </p>
-            `;
+    const total =
+        respostasSimulador.agua +
+        respostasSimulador.energia +
+        respostasSimulador.solo;
 
-        }else if(total >= 15){
+    const resultado =
+        document.getElementById("perfilSustentavel");
 
-            resultado.innerHTML = `
-                <h3>🌱 Produtor Consciente</h3>
-                <p>
-                    Você adota algumas práticas sustentáveis,
-                    mas ainda pode evoluir para reduzir impactos ambientais.
-                </p>
-            `;
+    resultado.style.display = "block";
 
-        }else{
+    if (total >= 25) {
 
-            resultado.innerHTML = `
-                <h3>🚜 Produtor Tradicional</h3>
-                <p>
-                    Reavaliar algumas escolhas pode contribuir para um futuro
-                    mais equilibrado entre produção e meio ambiente.
-                </p>
-            `;
+        resultado.innerHTML = `
+            <h3>🌎 Produtor Inovador</h3>
+            <p>Você demonstra forte compromisso com a sustentabilidade.</p>
+        `;
 
-        }
+    } else if (total >= 15) {
 
-    });
+        resultado.innerHTML = `
+            <h3>🌱 Produtor Consciente</h3>
+            <p>Você já adota boas práticas, mas pode evoluir ainda mais.</p>
+        `;
 
+    } else {
+
+        resultado.innerHTML = `
+            <h3>🚜 Produtor Tradicional</h3>
+            <p>Pequenas mudanças podem tornar sua produção mais sustentável.</p>
+        `;
+    }
 }
 
 
