@@ -1,1 +1,348 @@
+/* ==========================================
+   AGRO FORTE: FUTURO SUSTENTÁVEL
+   Concurso Agrinho 2026
+   style.css - Parte 1
+========================================== */
 
+/* RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* VARIÁVEIS */
+:root{
+    --cor-principal: #2e7d32;
+    --cor-secundaria: #66bb6a;
+    --cor-destaque: #ffca28;
+    --cor-texto: #333333;
+    --cor-fundo: #f4f7f4;
+    --cor-branca: #ffffff;
+    --cor-footer: #1b5e20;
+
+    --sombra: 0 4px 12px rgba(0,0,0,0.15);
+
+    --transicao: 0.3s ease;
+}
+
+/* BODY */
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* ROLAGEM SUAVE */
+html{
+    scroll-behavior: smooth;
+}
+
+/* LINKS */
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+/* LISTAS */
+ul{
+    list-style: none;
+}
+
+/* IMAGENS */
+img{
+    max-width: 100%;
+    display: block;
+}
+
+/* ==========================================
+   CABEÇALHO
+========================================== */
+
+.header{
+    background-color: var(--cor-principal);
+
+    color: var(--cor-branca);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 8%;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    box-shadow: var(--sombra);
+}
+
+/* LOGO */
+
+.logo h1{
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.logo span{
+    font-size: 0.95rem;
+}
+
+/* MENU */
+
+.menu-lista{
+    display: flex;
+    gap: 25px;
+}
+
+.menu-lista a{
+    font-weight: 500;
+
+    transition: var(--transicao);
+
+    padding: 8px;
+}
+
+.menu-lista a:hover{
+    color: var(--cor-destaque);
+}
+
+/* ==========================================
+   BOTÃO MODO ESCURO
+========================================== */
+
+.btn-dark{
+    background-color: var(--cor-destaque);
+
+    color: var(--cor-texto);
+
+    border: none;
+
+    padding: 12px 18px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-weight: 600;
+
+    transition: var(--transicao);
+}
+
+.btn-dark:hover{
+    transform: translateY(-3px);
+}
+
+/* ==========================================
+   HERO
+========================================== */
+
+.hero{
+    min-height: 90vh;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.45),
+            rgba(0,0,0,0.45)
+        ),
+        url("assets/img/banner.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 40px;
+}
+
+.hero-conteudo{
+    max-width: 900px;
+
+    color: var(--cor-branca);
+}
+
+.hero-conteudo h2{
+    font-size: 3rem;
+
+    margin-bottom: 25px;
+}
+
+.hero-conteudo p{
+    font-size: 1.2rem;
+
+    margin-bottom: 35px;
+}
+
+/* ==========================================
+   BOTÕES PRINCIPAIS
+========================================== */
+
+.btn-principal{
+    background-color: var(--cor-destaque);
+
+    color: var(--cor-texto);
+
+    border: none;
+
+    padding: 15px 30px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-size: 1rem;
+
+    font-weight: 600;
+
+    transition: var(--transicao);
+}
+
+.btn-principal:hover{
+    transform: translateY(-4px);
+
+    box-shadow: var(--sombra);
+}
+
+/* ==========================================
+   SEÇÕES
+========================================== */
+
+.secao{
+    padding: 80px 8%;
+}
+
+.destaque{
+    background-color: var(--cor-branca);
+}
+
+.titulo-secao{
+    text-align: center;
+
+    margin-bottom: 50px;
+}
+
+.titulo-secao h2{
+    color: var(--cor-principal);
+
+    font-size: 2.4rem;
+
+    margin-bottom: 15px;
+}
+
+.titulo-secao p{
+    max-width: 800px;
+
+    margin: 0 auto;
+
+    font-size: 1.05rem;
+}
+
+/* ==========================================
+   FRASE DINÂMICA
+========================================== */
+
+.frase-container{
+    background-color: var(--cor-secundaria);
+
+    color: var(--cor-branca);
+
+    text-align: center;
+
+    padding: 35px;
+}
+
+.frase-container h2{
+    margin-bottom: 15px;
+}
+
+#fraseDinamica{
+    font-size: 1.2rem;
+
+    font-style: italic;
+}
+
+/* ==========================================
+   CARDS
+========================================== */
+
+.cards{
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+
+    gap: 30px;
+}
+
+.card{
+    background-color: var(--cor-branca);
+
+    border-radius: 15px;
+
+    padding: 30px;
+
+    box-shadow: var(--sombra);
+
+    transition: var(--transicao);
+}
+
+.card:hover{
+    transform: translateY(-8px);
+}
+
+.card h3{
+    color: var(--cor-principal);
+
+    margin-bottom: 15px;
+}
+
+.card p{
+    margin-bottom: 20px;
+}
+
+/* ==========================================
+   BOTÕES DOS CARDS
+========================================== */
+
+.btn-card{
+    background-color: var(--cor-principal);
+
+    color: var(--cor-branca);
+
+    border: none;
+
+    padding: 12px 20px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    transition: var(--transicao);
+}
+
+.btn-card:hover{
+    background-color: var(--cor-secundaria);
+}
+
+/* ==========================================
+   INFORMAÇÕES EXPANSÍVEIS
+========================================== */
+
+.info-extra{
+    display: none;
+
+    margin-top: 20px;
+
+    padding: 15px;
+
+    border-left: 5px solid var(--cor-secundaria);
+
+    background-color: #eef7ee;
+
+    border-radius: 8px;
+}
