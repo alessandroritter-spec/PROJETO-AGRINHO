@@ -1,0 +1,13 @@
+PROJETO-AGRINHO
+│
+├── README.md
+├── index.html
+├── script.js
+├── style.css
+│
+└── assets
+    └── img
+        ├── banner.jpg
+        ├── agricultura1.jpg
+        ├── agricultura2.jpg
+        └── agricultura3.jpg
