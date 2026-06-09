@@ -2,33 +2,75 @@
    AGRO FORTE: FUTURO SUSTENTÁVEL
    Concurso Agrinho 2026
    script.js
+   Desenvolvido em JavaScript puro
+========================================== */
+
+/* ==========================================
+   VARIÁVEIS GLOBAIS
+========================================== */
+
+let respostasSimulador = {
+    agua: 0,
+    energia: 0,
+    solo: 0
+};
+
+let pontuacaoQuiz = 0;
+
+/* ==========================================
+   INICIALIZAÇÃO DO SITE
 ========================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    /* ==========================================
-       MODO ESCURO
-    ========================================== */
+    console.log("Projeto Agro Forte: Futuro Sustentável carregado com sucesso.");
+
+    configurarModoEscuro();
+    configurarFraseDinamica();
+    configurarSimulador();
+    configurarQuiz();
+    configurarCalculadora();
+    configurarRolagemSuave();
+
+});
+
+/* ==========================================
+   MODO ESCURO
+========================================== */
+
+function configurarModoEscuro() {
 
     const botaoModo = document.getElementById("modoEscuro");
+
+    if (!botaoModo) return;
 
     botaoModo.addEventListener("click", () => {
 
         document.body.classList.toggle("dark-mode");
 
         if (document.body.classList.contains("dark-mode")) {
+
             botaoModo.textContent = "☀️ Modo Claro";
+
         } else {
+
             botaoModo.textContent = "🌙 Modo Escuro";
+
         }
 
     });
 
-    /* ==========================================
-       FRASE DINÂMICA
-    ========================================== */
+}
+
+/* ==========================================
+   FRASE DINÂMICA
+========================================== */
+
+function configurarFraseDinamica() {
 
     const frase = document.getElementById("fraseDinamica");
+
+    if (!frase) return;
 
     const hora = new Date().getHours();
 
@@ -42,49 +84,34 @@ document.addEventListener("DOMContentLoaded", () => {
     } else if (hora >= 12 && hora < 18) {
 
         mensagem =
-            "🌿 A sustentabilidade é cultivada em cada decisão tomada.";
+            "🌿 Cada decisão sustentável fortalece o futuro do planeta.";
 
     } else {
 
         mensagem =
-            "🌙 Planejar hoje garante alimento e equilíbrio amanhã.";
+            "🌙 Planejar hoje é garantir alimento e equilíbrio amanhã.";
 
     }
 
     frase.textContent = mensagem;
 
-    /* ==========================================
-       BOTÃO EXPLORAR
-    ========================================== */
-
-    const explorar = document.getElementById("explorar");
-
-    explorar.addEventListener("click", () => {
-
-        document
-            .getElementById("agricultura")
-            .scrollIntoView({
-                behavior: "smooth"
-            });
-
-    });
-
-});
-
+}
 
 /* ==========================================
-   CARDS EXPANSÍVEIS
+   CARDS AGRICULTURA INTELIGENTE
 ========================================== */
 
-function mostrarInfo(id){
+function mostrarInfo(id) {
 
     const elemento = document.getElementById(id);
 
-    if(elemento.style.display === "block"){
+    if (!elemento) return;
+
+    if (elemento.style.display === "block") {
 
         elemento.style.display = "none";
 
-    }else{
+    } else {
 
         elemento.style.display = "block";
 
@@ -92,85 +119,82 @@ function mostrarInfo(id){
 
 }
 
-
 /* ==========================================
-   SIMULADOR SUSTENTÁVEL
+   SIMULADOR
 ========================================== */
 
-let respostasSimulador = {
-    agua: 0,
-    energia: 0,
-    solo: 0
-};
-
-function responderSimulador(tipo, valor){
+function responderSimulador(tipo, valor) {
 
     respostasSimulador[tipo] = valor;
 
 }
 
+function configurarSimulador() {
 
-/* Resultado do simulador */
+    const botao =
+        document.getElementById("resultadoSimulador");
 
-const botaoResultado = document.getElementById("resultadoSimulador");
+    if (!botao) return;
 
-if(botaoResultado){
+    botao.addEventListener("click", () => {
 
-   document.addEventListener("DOMContentLoaded", () => {
+        const total =
+            respostasSimulador.agua +
+            respostasSimulador.energia +
+            respostasSimulador.solo;
 
-    const botaoResultado = document.getElementById("resultadoSimulador");
+        const resultado =
+            document.getElementById("perfilSustentavel");
 
-    if (botaoResultado) {
-        botaoResultado.addEventListener("click", mostrarResultadoSimulador);
-    }
+        if (!resultado) return;
 
-});
+        resultado.style.display = "block";
 
-function mostrarResultadoSimulador() {
+        if (total >= 25) {
 
-    const total =
-        respostasSimulador.agua +
-        respostasSimulador.energia +
-        respostasSimulador.solo;
+            resultado.innerHTML = `
+                <h3>🌎 Produtor Inovador</h3>
 
-    const resultado =
-        document.getElementById("perfilSustentavel");
+                <p>
+                    Você demonstra forte compromisso com a sustentabilidade,
+                    utilizando práticas que equilibram produtividade
+                    e preservação ambiental.
+                </p>
+            `;
 
-    resultado.style.display = "block";
+        } else if (total >= 15) {
 
-    if (total >= 25) {
+            resultado.innerHTML = `
+                <h3>🌱 Produtor Consciente</h3>
 
-        resultado.innerHTML = `
-            <h3>🌎 Produtor Inovador</h3>
-            <p>Você demonstra forte compromisso com a sustentabilidade.</p>
-        `;
+                <p>
+                    Você já adota boas práticas sustentáveis,
+                    mas ainda pode evoluir em alguns aspectos.
+                </p>
+            `;
 
-    } else if (total >= 15) {
+        } else {
 
-        resultado.innerHTML = `
-            <h3>🌱 Produtor Consciente</h3>
-            <p>Você já adota boas práticas, mas pode evoluir ainda mais.</p>
-        `;
+            resultado.innerHTML = `
+                <h3>🚜 Produtor Tradicional</h3>
 
-    } else {
+                <p>
+                    Pequenas mudanças podem tornar a produção
+                    mais eficiente e sustentável.
+                </p>
+            `;
 
-        resultado.innerHTML = `
-            <h3>🚜 Produtor Tradicional</h3>
-            <p>Pequenas mudanças podem tornar sua produção mais sustentável.</p>
-        `;
-    }
+        }
+
+    });
+
 }
 
-
 /* ==========================================
-   QUIZ AGRINHO
+   QUIZ
 ========================================== */
 
-let pontuacaoQuiz = 0;
-
-let perguntasRespondidas = 0;
-
-function responderQuiz(botao, correta){
+function responderQuiz(botao, correta) {
 
     const opcoes =
         botao.parentElement.querySelectorAll("button");
@@ -181,38 +205,37 @@ function responderQuiz(botao, correta){
 
     });
 
-    if(correta){
+    if (correta) {
 
         botao.classList.add("resposta-correta");
 
         pontuacaoQuiz++;
 
-    }else{
+    } else {
 
         botao.classList.add("resposta-incorreta");
 
     }
 
-    perguntasRespondidas++;
-
 }
 
+function configurarQuiz() {
 
-/* Resultado do Quiz */
+    const finalizarQuiz =
+        document.getElementById("finalizarQuiz");
 
-const finalizarQuiz =
-    document.getElementById("finalizarQuiz");
-
-if(finalizarQuiz){
+    if (!finalizarQuiz) return;
 
     finalizarQuiz.addEventListener("click", () => {
 
-        const resultadoQuiz =
+        const resultado =
             document.getElementById("resultadoQuiz");
 
-        resultadoQuiz.style.display = "block";
+        if (!resultado) return;
 
-        resultadoQuiz.innerHTML = `
+        resultado.style.display = "block";
+
+        resultado.innerHTML = `
             <h3>Resultado do Quiz</h3>
 
             <p>
@@ -228,50 +251,45 @@ if(finalizarQuiz){
 
 }
 
-
 /* ==========================================
    CALCULADORA DE SUSTENTABILIDADE
 ========================================== */
 
-const calcular =
-    document.getElementById("calcularPegada");
+function configurarCalculadora() {
 
-if(calcular){
+    const botao =
+        document.getElementById("calcularPegada");
 
-    calcular.addEventListener("click", () => {
+    if (!botao) return;
+
+    botao.addEventListener("click", () => {
 
         let pontos = 0;
 
-        if(document.getElementById("solar").checked){
-
-            pontos += 1;
-
+        if (document.getElementById("solar")?.checked) {
+            pontos++;
         }
 
-        if(document.getElementById("reuso").checked){
-
-            pontos += 1;
-
+        if (document.getElementById("reuso")?.checked) {
+            pontos++;
         }
 
-        if(document.getElementById("rotacao").checked){
-
-            pontos += 1;
-
+        if (document.getElementById("rotacao")?.checked) {
+            pontos++;
         }
 
-        if(document.getElementById("preservacao").checked){
-
-            pontos += 1;
-
+        if (document.getElementById("preservacao")?.checked) {
+            pontos++;
         }
 
         const resultado =
             document.getElementById("resultadoPegada");
 
+        if (!resultado) return;
+
         resultado.style.display = "block";
 
-        if(pontos === 4){
+        if (pontos === 4) {
 
             resultado.innerHTML = `
                 <h3>🌟 Excelente!</h3>
@@ -282,25 +300,24 @@ if(calcular){
                 </p>
             `;
 
-        }else if(pontos >= 2){
+        } else if (pontos >= 2) {
 
             resultado.innerHTML = `
                 <h3>🌿 Muito Bom!</h3>
 
                 <p>
                     Você já pratica ações importantes,
-                    mas ainda pode evoluir em alguns aspectos.
+                    mas ainda pode evoluir.
                 </p>
             `;
 
-        }else{
+        } else {
 
             resultado.innerHTML = `
                 <h3>🌱 Há Espaço para Crescer</h3>
 
                 <p>
-                    Pequenas mudanças nas suas escolhas podem gerar
-                    grandes impactos positivos no meio ambiente.
+                    Pequenas mudanças podem gerar grandes impactos positivos.
                 </p>
             `;
 
@@ -310,11 +327,36 @@ if(calcular){
 
 }
 
-
 /* ==========================================
-   MENSAGEM NO CONSOLE
+   MENU COM ROLAGEM SUAVE
 ========================================== */
 
-console.log(
-    "Projeto Agro Forte: Futuro Sustentável carregado com sucesso."
-);
+function configurarRolagemSuave() {
+
+    const links =
+        document.querySelectorAll(".menu a");
+
+    links.forEach(link => {
+
+        link.addEventListener("click", (evento) => {
+
+            evento.preventDefault();
+
+            const destino =
+                document.querySelector(
+                    link.getAttribute("href")
+                );
+
+            if (destino) {
+
+                destino.scrollIntoView({
+                    behavior: "smooth"
+                });
+
+            }
+
+        });
+
+    });
+
+}
